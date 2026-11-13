@@ -85,6 +85,20 @@ Detalhes, comandos e tabelas comparativas: `docs/RESULTADOS_E_VERIFICACAO.md`.
 | Branch | `checkpoint/diagnostico-20261021` |
 | Estado usado | *working tree* com 76 alterações pendentes + cópia de execução de 02–10/11/2026 |
 | Snapshot | 2026-11-11 |
+| Tag deste repositório | `snapshot-2026-11-11` |
+
+## Como citar
+
+Use o arquivo `CITATION.cff` (a página do repositório mostra o botão *Cite
+this repository*) ou:
+
+```
+ALEF-TAV: material de reprodutibilidade da dissertação de mestrado.
+Snapshot 2026-11-11. GitHub: carvalhojaderson/alef-tav-dissertacao-reprodutibilidade.
+```
+
+O `CITATION.cff` ainda pede confirmação do nome completo e do ORCID do autor
+antes de uma citação formal — item listado nas pendências.
 
 Detalhamento em `docs/VERSAO_E_RASTREABILIDADE.md`.
 
