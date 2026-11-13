@@ -1,0 +1,29 @@
+﻿codigo;nome;dimensao;unidade;A_valor;A_estado;B_valor;B_estado;delta_pct_A_menos_B;base;presente_em
+S1;Composicao elementar e pureza;D1;fracao m/m (0-1) e % m/m;;ausente;;ausente;;;nenhum
+S2;Fase cristalina / estrutura;D1;fases (texto) e % de cristalinidade;;ausente;;ausente;;;nenhum
+S3;Area superficial especifica (BET);D1;m2/g;1262.0;presente;963.0;presente;31.05;Brazil et al., 2026;A e B
+S4;Volume e distribuicao de poros;D1;cm3/g;0.58;presente;0.49;presente;18.37;Brazil et al., 2026;A e B
+S5;Tamanho de particula;D1;um ou nm;;ausente;;ausente;;;nenhum
+S6;Grupos funcionais de superficie;D1;mmol/g e classe quimica;;ausente;;ausente;;;nenhum
+S7;Morfologia e agregacao;D1;descritivo (texto) + tamanho de aglomerado (um);;ausente;;ausente;;;nenhum
+P1;Densidade real e aparente;D2;g/cm3;;ausente;;ausente;;;nenhum
+P2;Ponto de carga zero (PZC);D2;pH (adimensional);;ausente;;ausente;;;nenhum
+P3;Capacidade de troca ionica (CTC);D2;cmol/kg (meq/100 g);;ausente;;ausente;;;nenhum
+P4;Hidrofobicidade / molhabilidade;D2;graus (angulo) ou log Kow;;ausente;;ausente;;;nenhum
+P5;Estabilidade termica;D2;graus C e % de perda;;ausente;;ausente;;;nenhum
+P6;Condutividade / banda proibida;D2;eV;2.0;estimado;2.0;estimado;0.0;universal.sim_dft (saida bandgap_eV);A e B
+P7;Solubilidade e lixiviacao;D2;mg/L e % m/m;;ausente;;ausente;;;nenhum
+D1;Capacidade maxima de adsorcao (qmax);D3;mg/g;100.0;presente;100.0;presente;0.0;Brazil et al., 2026;A e B
+D2;Afinidade (KL, Kf) e fator de separacao;D3;L/mg e adimensional;;ausente;;ausente;;;nenhum
+D3;Cinetica de adsorcao;D3;1/min e min;;ausente;;ausente;;;nenhum
+D4;Seletividade entre contaminantes;D3;adimensional;;ausente;;ausente;;;nenhum
+D5;Regeneracao e reuso;D3;% por ciclo e ciclos;;ausente;;ausente;;;nenhum
+D6;Eficiencia de remocao;D3;% e mg/g;;ausente;;ausente;;;nenhum
+D7;Faixa operacional de pH/temperatura;D3;pH e graus C;;ausente;;ausente;;;nenhum
+C1;Toxicidade e seguranca;D4;categoria (GHS) e mg/L (LC50/EC50);;ausente;;ausente;;;nenhum
+C2;Custo especifico;D4;R$/kg e R$/g removido;;ausente;;ausente;;;nenhum
+C3;Disponibilidade e origem do residuo;D4;t/ano e km;;ausente;;ausente;;;nenhum
+C4;Pegada energetica e emissoes;D4;kWh/kg e kg CO2e/kg;;ausente;;ausente;;;nenhum
+C5;Reciclabilidade e fim de vida;D4;ciclos uteis e % de massa reaproveitada;;ausente;;ausente;;;nenhum
+C6;Conformidade normativa;D4;mg/L (limite) e status;;ausente;;ausente;;;nenhum
+C7;Escalabilidade e operacao;D4;m3/h, min e kPa/m;;ausente;;ausente;;;nenhum

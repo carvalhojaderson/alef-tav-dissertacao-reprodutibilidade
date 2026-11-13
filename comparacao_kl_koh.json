@@ -1,0 +1,973 @@
+{
+  "pesquisa_id": "pesq_63b32e62389dae7c",
+  "contaminante": "sulfametoxazol, classe ionica: anion organico",
+  "condicoes": {
+    "pH": 5.5,
+    "temperatura_C": 25.0
+  },
+  "candidatos": [
+    {
+      "rotulo": "A",
+      "nome": "KL-KOH-1:1",
+      "material_id": "mat_ca84ac210575584a",
+      "descritores": {
+        "S1": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "fracao m/m (0-1) e % m/m",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "S2": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "fases (texto) e % de cristalinidade",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "S3": {
+          "valor": 1262.0,
+          "valor_texto": null,
+          "unidade": "m2/g",
+          "estado": "presente",
+          "fonte": "universal.sim_superficie (saida area_m2g)"
+        },
+        "S4": {
+          "valor": 0.58,
+          "valor_texto": null,
+          "unidade": "cm3/g",
+          "estado": "presente",
+          "fonte": "Brazil et al., 2026"
+        },
+        "S5": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "um ou nm",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "S6": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "mmol/g e classe quimica",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "S7": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "descritivo (texto) + tamanho de aglomerado (um)",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P1": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "g/cm3",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P2": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "pH (adimensional)",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P3": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "cmol/kg (meq/100 g)",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P4": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "graus (angulo) ou log Kow",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P5": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "graus C e % de perda",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P6": {
+          "valor": 2.0,
+          "valor_texto": null,
+          "unidade": "eV",
+          "estado": "estimado",
+          "fonte": "universal.sim_dft (saida bandgap_eV)"
+        },
+        "P7": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "mg/L e % m/m",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D1": {
+          "valor": 100.0,
+          "valor_texto": null,
+          "unidade": "mg/g",
+          "estado": "presente",
+          "fonte": "Brazil et al., 2026"
+        },
+        "D2": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "L/mg e adimensional",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D3": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "1/min e min",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D4": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "adimensional",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D5": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "% por ciclo e ciclos",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D6": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "% e mg/g",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D7": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "pH e graus C",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C1": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "categoria (GHS) e mg/L (LC50/EC50)",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C2": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "R$/kg e R$/g removido",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C3": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "t/ano e km",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C4": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "kWh/kg e kg CO2e/kg",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C5": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "ciclos uteis e % de massa reaproveitada",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C6": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "mg/L (limite) e status",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C7": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "m3/h, min e kPa/m",
+          "estado": "ausente",
+          "fonte": null
+        }
+      },
+      "preenchimento": {
+        "total_avaliado": 28,
+        "com_dado": 4,
+        "sem_dado": 24,
+        "percentual_com_dado": 14.29,
+        "por_estado": {
+          "presente": 3,
+          "calculado": 0,
+          "estimado": 1,
+          "ausente": 24,
+          "nao_aplicavel": 0,
+          "validado": 0
+        },
+        "por_dimensao": {
+          "D1": {
+            "preenchidos": 2,
+            "total": 7,
+            "percentual": 28.57
+          },
+          "D2": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D3": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D4": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          }
+        }
+      },
+      "compatibilidade": {
+        "veredito": "indeterminado",
+        "classe_contaminante": "anion_organico",
+        "pzc": null,
+        "pH": 5.5,
+        "faltando": [
+          "P2 (PZC)"
+        ],
+        "regra": "pH < PZC: superficie protonada (carga positiva) favorece adsorcao de especies anionicas; pH > PZC: superficie desprotonada (carga negativa) favorece cations. |pH - PZC| e' a margem de carga efetiva.",
+        "motivos": [
+          "sem dado suficiente: P2 (PZC)"
+        ]
+      },
+      "modelos": {
+        "langmuir": {
+          "estado": "bloqueado_por_parametros",
+          "qe": null,
+          "faltando": [
+            "KL"
+          ]
+        },
+        "freundlich": {
+          "estado": "bloqueado_por_parametros",
+          "qe": null,
+          "faltando": [
+            "Kf",
+            "n"
+          ]
+        }
+      },
+      "lacunas": [
+        "S1",
+        "P2",
+        "D2",
+        "D3",
+        "D6",
+        "D7",
+        "C1",
+        "C6"
+      ]
+    },
+    {
+      "rotulo": "B",
+      "nome": "KL-KOH-2:1",
+      "material_id": "mat_358eb4207c9fb795",
+      "descritores": {
+        "S1": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "fracao m/m (0-1) e % m/m",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "S2": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "fases (texto) e % de cristalinidade",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "S3": {
+          "valor": 963.0,
+          "valor_texto": null,
+          "unidade": "m2/g",
+          "estado": "presente",
+          "fonte": "universal.sim_superficie (saida area_m2g)"
+        },
+        "S4": {
+          "valor": 0.49,
+          "valor_texto": null,
+          "unidade": "cm3/g",
+          "estado": "presente",
+          "fonte": "Brazil et al., 2026"
+        },
+        "S5": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "um ou nm",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "S6": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "mmol/g e classe quimica",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "S7": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "descritivo (texto) + tamanho de aglomerado (um)",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P1": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "g/cm3",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P2": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "pH (adimensional)",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P3": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "cmol/kg (meq/100 g)",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P4": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "graus (angulo) ou log Kow",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P5": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "graus C e % de perda",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "P6": {
+          "valor": 2.0,
+          "valor_texto": null,
+          "unidade": "eV",
+          "estado": "estimado",
+          "fonte": "universal.sim_dft (saida bandgap_eV)"
+        },
+        "P7": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "mg/L e % m/m",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D1": {
+          "valor": 100.0,
+          "valor_texto": null,
+          "unidade": "mg/g",
+          "estado": "presente",
+          "fonte": "Brazil et al., 2026"
+        },
+        "D2": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "L/mg e adimensional",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D3": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "1/min e min",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D4": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "adimensional",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D5": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "% por ciclo e ciclos",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D6": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "% e mg/g",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "D7": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "pH e graus C",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C1": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "categoria (GHS) e mg/L (LC50/EC50)",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C2": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "R$/kg e R$/g removido",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C3": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "t/ano e km",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C4": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "kWh/kg e kg CO2e/kg",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C5": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "ciclos uteis e % de massa reaproveitada",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C6": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "mg/L (limite) e status",
+          "estado": "ausente",
+          "fonte": null
+        },
+        "C7": {
+          "valor": null,
+          "valor_texto": null,
+          "unidade": "m3/h, min e kPa/m",
+          "estado": "ausente",
+          "fonte": null
+        }
+      },
+      "preenchimento": {
+        "total_avaliado": 28,
+        "com_dado": 4,
+        "sem_dado": 24,
+        "percentual_com_dado": 14.29,
+        "por_estado": {
+          "presente": 3,
+          "calculado": 0,
+          "estimado": 1,
+          "ausente": 24,
+          "nao_aplicavel": 0,
+          "validado": 0
+        },
+        "por_dimensao": {
+          "D1": {
+            "preenchidos": 2,
+            "total": 7,
+            "percentual": 28.57
+          },
+          "D2": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D3": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D4": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          }
+        }
+      },
+      "compatibilidade": {
+        "veredito": "indeterminado",
+        "classe_contaminante": "anion_organico",
+        "pzc": null,
+        "pH": 5.5,
+        "faltando": [
+          "P2 (PZC)"
+        ],
+        "regra": "pH < PZC: superficie protonada (carga positiva) favorece adsorcao de especies anionicas; pH > PZC: superficie desprotonada (carga negativa) favorece cations. |pH - PZC| e' a margem de carga efetiva.",
+        "motivos": [
+          "sem dado suficiente: P2 (PZC)"
+        ]
+      },
+      "modelos": {
+        "langmuir": {
+          "estado": "bloqueado_por_parametros",
+          "qe": null,
+          "faltando": [
+            "KL"
+          ]
+        },
+        "freundlich": {
+          "estado": "bloqueado_por_parametros",
+          "qe": null,
+          "faltando": [
+            "Kf",
+            "n"
+          ]
+        }
+      },
+      "lacunas": [
+        "S1",
+        "P2",
+        "D2",
+        "D3",
+        "D6",
+        "D7",
+        "C1",
+        "C6"
+      ]
+    }
+  ],
+  "tabela_28_descritores": [
+    {
+      "codigo": "S1",
+      "nome": "Composicao elementar e pureza",
+      "dimensao": "D1",
+      "unidade": "fracao m/m (0-1) e % m/m",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "S2",
+      "nome": "Fase cristalina / estrutura",
+      "dimensao": "D1",
+      "unidade": "fases (texto) e % de cristalinidade",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "S3",
+      "nome": "Area superficial especifica (BET)",
+      "dimensao": "D1",
+      "unidade": "m2/g",
+      "A_valor": 1262.0,
+      "A_estado": "presente",
+      "B_valor": 963.0,
+      "B_estado": "presente",
+      "delta_pct_A_menos_B": 31.05,
+      "base": "Brazil et al., 2026",
+      "presente_em": "A e B"
+    },
+    {
+      "codigo": "S4",
+      "nome": "Volume e distribuicao de poros",
+      "dimensao": "D1",
+      "unidade": "cm3/g",
+      "A_valor": 0.58,
+      "A_estado": "presente",
+      "B_valor": 0.49,
+      "B_estado": "presente",
+      "delta_pct_A_menos_B": 18.37,
+      "base": "Brazil et al., 2026",
+      "presente_em": "A e B"
+    },
+    {
+      "codigo": "S5",
+      "nome": "Tamanho de particula",
+      "dimensao": "D1",
+      "unidade": "um ou nm",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "S6",
+      "nome": "Grupos funcionais de superficie",
+      "dimensao": "D1",
+      "unidade": "mmol/g e classe quimica",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "S7",
+      "nome": "Morfologia e agregacao",
+      "dimensao": "D1",
+      "unidade": "descritivo (texto) + tamanho de aglomerado (um)",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "P1",
+      "nome": "Densidade real e aparente",
+      "dimensao": "D2",
+      "unidade": "g/cm3",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "P2",
+      "nome": "Ponto de carga zero (PZC)",
+      "dimensao": "D2",
+      "unidade": "pH (adimensional)",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "P3",
+      "nome": "Capacidade de troca ionica (CTC)",
+      "dimensao": "D2",
+      "unidade": "cmol/kg (meq/100 g)",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "P4",
+      "nome": "Hidrofobicidade / molhabilidade",
+      "dimensao": "D2",
+      "unidade": "graus (angulo) ou log Kow",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "P5",
+      "nome": "Estabilidade termica",
+      "dimensao": "D2",
+      "unidade": "graus C e % de perda",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "P6",
+      "nome": "Condutividade / banda proibida",
+      "dimensao": "D2",
+      "unidade": "eV",
+      "A_valor": 2.0,
+      "A_estado": "estimado",
+      "B_valor": 2.0,
+      "B_estado": "estimado",
+      "delta_pct_A_menos_B": 0.0,
+      "base": "universal.sim_dft (saida bandgap_eV)",
+      "presente_em": "A e B"
+    },
+    {
+      "codigo": "P7",
+      "nome": "Solubilidade e lixiviacao",
+      "dimensao": "D2",
+      "unidade": "mg/L e % m/m",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "D1",
+      "nome": "Capacidade maxima de adsorcao (qmax)",
+      "dimensao": "D3",
+      "unidade": "mg/g",
+      "A_valor": 100.0,
+      "A_estado": "presente",
+      "B_valor": 100.0,
+      "B_estado": "presente",
+      "delta_pct_A_menos_B": 0.0,
+      "base": "Brazil et al., 2026",
+      "presente_em": "A e B"
+    },
+    {
+      "codigo": "D2",
+      "nome": "Afinidade (KL, Kf) e fator de separacao",
+      "dimensao": "D3",
+      "unidade": "L/mg e adimensional",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "D3",
+      "nome": "Cinetica de adsorcao",
+      "dimensao": "D3",
+      "unidade": "1/min e min",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "D4",
+      "nome": "Seletividade entre contaminantes",
+      "dimensao": "D3",
+      "unidade": "adimensional",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "D5",
+      "nome": "Regeneracao e reuso",
+      "dimensao": "D3",
+      "unidade": "% por ciclo e ciclos",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "D6",
+      "nome": "Eficiencia de remocao",
+      "dimensao": "D3",
+      "unidade": "% e mg/g",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "D7",
+      "nome": "Faixa operacional de pH/temperatura",
+      "dimensao": "D3",
+      "unidade": "pH e graus C",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "C1",
+      "nome": "Toxicidade e seguranca",
+      "dimensao": "D4",
+      "unidade": "categoria (GHS) e mg/L (LC50/EC50)",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "C2",
+      "nome": "Custo especifico",
+      "dimensao": "D4",
+      "unidade": "R$/kg e R$/g removido",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "C3",
+      "nome": "Disponibilidade e origem do residuo",
+      "dimensao": "D4",
+      "unidade": "t/ano e km",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "C4",
+      "nome": "Pegada energetica e emissoes",
+      "dimensao": "D4",
+      "unidade": "kWh/kg e kg CO2e/kg",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "C5",
+      "nome": "Reciclabilidade e fim de vida",
+      "dimensao": "D4",
+      "unidade": "ciclos uteis e % de massa reaproveitada",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "C6",
+      "nome": "Conformidade normativa",
+      "dimensao": "D4",
+      "unidade": "mg/L (limite) e status",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    },
+    {
+      "codigo": "C7",
+      "nome": "Escalabilidade e operacao",
+      "dimensao": "D4",
+      "unidade": "m3/h, min e kPa/m",
+      "A_valor": null,
+      "A_estado": "ausente",
+      "B_valor": null,
+      "B_estado": "ausente",
+      "delta_pct_A_menos_B": null,
+      "base": null,
+      "presente_em": "nenhum"
+    }
+  ],
+  "resumo": {
+    "A_com_dado": 4,
+    "B_com_dado": 4,
+    "empate_cobertura": true,
+    "descritores_so_em_A": [],
+    "descritores_so_em_B": [],
+    "descritores_em_ambos": [
+      "S3",
+      "S4",
+      "P6",
+      "D1"
+    ],
+    "descritores_em_nenhum": [
+      "S1",
+      "S2",
+      "S5",
+      "S6",
+      "S7",
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P7",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7"
+    ]
+  }
+}

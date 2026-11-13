@@ -1,0 +1,7 @@
+# Preserva os bytes originais do snapshot: nenhuma normalizacao de fim de linha.
+# Os arquivos vindos do projeto usam CRLF; os hashes de MANIFEST_SHA256.txt
+# so continuam validos se o conteudo for entregue exatamente como foi publicado.
+* -text
+
+*.db binary
+*.pyc binary

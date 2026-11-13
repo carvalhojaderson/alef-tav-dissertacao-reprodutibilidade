@@ -1,0 +1,24 @@
+# Ambiente e credenciais — nunca versionar
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+token*.txt
+
+# Artefatos de execução
+__pycache__/
+*.py[cod]
+# bytecode CPython 3.10 original (fonte perdido por corrupcao de disco): DEVE ser versionado
+!ambiental_backend/_recuperacao/*.pyc
+.pytest_cache/
+.venv/
+venv/
+_palco310/
+_palco310*/
+# ambient_backend/_recuperacao/ contem o bytecode CPython 3.10 original: DEVE ser versionado
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

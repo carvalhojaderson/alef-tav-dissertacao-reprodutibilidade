@@ -1,0 +1,1666 @@
+{
+ "A": {
+  "material_id": "mat_ca84ac210575584a",
+  "nome": "KL-KOH-1:1",
+  "antes": {
+   "total_avaliado": 28,
+   "com_dado": 4,
+   "sem_dado": 24,
+   "percentual_com_dado": 14.29,
+   "por_estado": {
+    "presente": 3,
+    "calculado": 0,
+    "estimado": 1,
+    "ausente": 24,
+    "nao_aplicavel": 0,
+    "validado": 0
+   },
+   "por_dimensao": {
+    "D1": {
+     "preenchidos": 2,
+     "total": 7,
+     "percentual": 28.57
+    },
+    "D2": {
+     "preenchidos": 1,
+     "total": 7,
+     "percentual": 14.29
+    },
+    "D3": {
+     "preenchidos": 1,
+     "total": 7,
+     "percentual": 14.29
+    },
+    "D4": {
+     "preenchidos": 0,
+     "total": 7,
+     "percentual": 0.0
+    }
+   }
+  },
+  "celulas": [
+   {
+    "codigo": "S1",
+    "rota": "motor:composicao_elementar/pureza_pct",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "CHNS declarado; pureza = fracao da fase carbonosa",
+    "unidade": "%",
+    "valor": 91.79,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "soma normalizada dos elementos principais",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "formula_empirica",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "CHNS declarado; pureza = fracao da fase carbonosa",
+     "rota": "motor:composicao_elementar/pureza_pct",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "composicao_elementar sobre CHNS declarado [nivel 3: cenario]"
+   },
+   {
+    "codigo": "S2",
+    "rota": "direto",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "padrao de DRX de carvao ativado; nao ha difratograma do material",
+    "unidade": "texto",
+    "valor": null,
+    "valor_texto": "amorfo: halo largo em 2-theta ~ 24 graus e banda em ~ 43 graus, sem reflexoes de grafite cristalino",
+    "estado": "estimado",
+    "memoria": "padrao de DRX de carvao ativado; nao ha difratograma do material",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "padrao de DRX de carvao ativado; nao ha difratograma do material",
+     "rota": "direto",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "literatura: DRX tipico de carbono ativado (sem difratograma) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "S3",
+    "rota": "banco:S3",
+    "nivel": 1,
+    "nivel_nome": "medido",
+    "base": "BET medido",
+    "unidade": "m2/g",
+    "valor": 1262.0,
+    "valor_texto": null,
+    "estado": "presente",
+    "memoria": "valor medido em bancada (nao calculado)",
+    "complemento": {
+     "nivel": 1,
+     "nivel_nome": "medido",
+     "base": "BET medido",
+     "rota": "banco:S3",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "Brazil et al., 2026 (ensaio de bancada) [nivel 1: medido]"
+   },
+   {
+    "codigo": "S4",
+    "rota": "banco:S4",
+    "nivel": 1,
+    "nivel_nome": "medido",
+    "base": "volume de poros medido",
+    "unidade": "cm3/g",
+    "valor": 0.58,
+    "valor_texto": null,
+    "estado": "presente",
+    "memoria": "valor medido em bancada (nao calculado)",
+    "complemento": {
+     "nivel": 1,
+     "nivel_nome": "medido",
+     "base": "volume de poros medido",
+     "rota": "banco:S4",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "Brazil et al., 2026 (ensaio de bancada) [nivel 1: medido]"
+   },
+   {
+    "codigo": "S5",
+    "rota": "direto",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "po moido e peneirado; d50 da faixa < 75 um",
+    "unidade": "um",
+    "valor": 45.0,
+    "valor_texto": null,
+    "estado": "estimado",
+    "memoria": "po moido e peneirado; d50 da faixa < 75 um",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "po moido e peneirado; d50 da faixa < 75 um",
+     "rota": "direto",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "granulometria declarada do processo de moagem [nivel 3: cenario]"
+   },
+   {
+    "codigo": "S6",
+    "rota": "motor:boehm_grupos/acidos_totais_mmol_g",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "titulacao de Boehm declarada",
+    "unidade": "mmol/g",
+    "valor": 0.8,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "acidez total de superficie por NaOH",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "sitios_basicos_mmol_g",
+       "valor": null,
+       "unidade": "mmol/g",
+       "memoria": "sitios basicos (HCl) como suporte"
+      },
+      {
+       "chave": "carboxilicas_mmol_g",
+       "valor": null,
+       "unidade": "mmol/g",
+       "memoria": null
+      },
+      {
+       "chave": "fenolicas_mmol_g",
+       "valor": null,
+       "unidade": "mmol/g",
+       "memoria": null
+      },
+      {
+       "chave": "lactonas_mmol_g",
+       "valor": null,
+       "unidade": "mmol/g",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "titulacao de Boehm declarada",
+     "rota": "motor:boehm_grupos/acidos_totais_mmol_g",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "boehm_grupos sobre consumos declarados [nivel 3: cenario]"
+   },
+   {
+    "codigo": "S7",
+    "rota": "motor:granulometria_psd/d50_um",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "d50 da distribuicao declarada",
+    "unidade": "um",
+    "valor": 30.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "D50 por interpolacao da distribuicao acumulada",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "span",
+       "valor": null,
+       "unidade": "adimensional",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "d50 da distribuicao declarada",
+     "rota": "motor:granulometria_psd/d50_um",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "granulometria_psd sobre diametros declarados [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P1",
+    "rota": "regra:P1",
+    "nivel": 2,
+    "nivel_nome": "derivado",
+    "base": "rho_ap = 1/(V_p + 1/rho_verdadeira) com V_p medido (S4) e rho_verdadeira = 1,90 g/cm3 declarada",
+    "unidade": "g/cm3",
+    "valor": 0.903901,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "rho = m/V = 0.9039/1.0000",
+    "complemento": {
+     "nivel": 2,
+     "nivel_nome": "derivado",
+     "base": "rho_ap = 1/(V_p + 1/rho_verdadeira) com V_p medido (S4) e rho_verdadeira = 1,90 g/cm3 declarada",
+     "rota": "regra:P1",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "derivado de S4 (medido) + densidade do esqueleto declarada [nivel 2: derivado]"
+   },
+   {
+    "codigo": "P2",
+    "rota": "motor:pzc_deriva_ph/pzc",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "deriva de pH declarada",
+    "unidade": "pH",
+    "valor": 7.2,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "PZC por interpolacao da deriva de pH (dPH=0)",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "deriva de pH declarada",
+     "rota": "motor:pzc_deriva_ph/pzc",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "pzc_deriva_ph sobre serie de pH declarada [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P3",
+    "rota": "regra:P3",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "titulacao de CTC declarada",
+    "unidade": "cmol/kg",
+    "valor": 30.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "CTC = (25.000-23.500) x 0.1000 x 1.00 x 100 / 0.5000",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "titulacao de CTC declarada",
+     "rota": "regra:P3",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "regra CTC sobre volumes declarados [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P4",
+    "rota": "motor:angulo_contato/energia_superficial_mN_m",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "energia superficial por Owens-Wendt com angulos declarados",
+    "unidade": "mN/m",
+    "valor": 28.59,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "energia superficial total por OWRK com dois liquidos",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "energia superficial por Owens-Wendt com angulos declarados",
+     "rota": "motor:angulo_contato/energia_superficial_mN_m",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "angulo_contato (agua 95 graus, diiodometano 60 graus) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P5",
+    "rota": "motor:tga_tangente/onset_C",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "onset da tangente na curva TGA declarada",
+    "unidade": "C",
+    "valor": 429.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "onset de decomposicao por tangente no pico de dTG",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "residuo_pct",
+       "valor": null,
+       "unidade": "%",
+       "memoria": null
+      },
+      {
+       "chave": "umidade_pct",
+       "valor": null,
+       "unidade": "%",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "onset da tangente na curva TGA declarada",
+     "rota": "motor:tga_tangente/onset_C",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "tga_tangente sobre curva declarada (10 C/min) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P6",
+    "rota": "na",
+    "nivel": 4,
+    "nivel_nome": "n/a",
+    "base": "adsorcao no escuro sem fotocatalise/eletroassistencia: banda proibida nao governa o processo; o valor 2,0 eV que estava na matriz era o padrao interno do sim_dft, nao propriedade do material",
+    "unidade": null,
+    "valor": null,
+    "valor_texto": "adsorcao no escuro sem fotocatalise/eletroassistencia: banda proibida nao governa o processo; o valor 2,0 eV que estava na matriz era o padrao interno do sim_dft, nao propriedade do material",
+    "estado": "nao_aplicavel",
+    "memoria": null,
+    "complemento": {
+     "nivel": 4,
+     "nivel_nome": "n/a",
+     "base": "adsorcao no escuro sem fotocatalise/eletroassistencia: banda proibida nao governa o processo; o valor 2,0 eV que estava na matriz era o padrao interno do sim_dft, nao propriedade do material",
+     "rota": "na",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "nao aplicavel ao uso em estudo (ver PLANO §2.4) [nivel 4: n/a]"
+   },
+   {
+    "codigo": "P7",
+    "rota": "motor:lixiviacao_cinetica/lixiviacao_pct",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "lixiviacao acumulada declarada",
+    "unidade": "%",
+    "valor": 1.2,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "fracao lixiviada final ajustada por nucleo encolhendo",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "modelo_lixiviacao",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "lixiviacao acumulada declarada",
+     "rota": "motor:lixiviacao_cinetica/lixiviacao_pct",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "lixiviacao_cinetica sobre serie declarada [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D1",
+    "rota": "banco:D1",
+    "nivel": 1,
+    "nivel_nome": "medido",
+    "base": "qmax medido",
+    "unidade": "mg/g",
+    "valor": 100.0,
+    "valor_texto": null,
+    "estado": "presente",
+    "memoria": "valor medido em bancada (nao calculado)",
+    "complemento": {
+     "nivel": 1,
+     "nivel_nome": "medido",
+     "base": "qmax medido",
+     "rota": "banco:D1",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "Brazil et al., 2026 (ensaio de bancada) [nivel 1: medido]"
+   },
+   {
+    "codigo": "D2",
+    "rota": "regra:D2",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "KL de Langmuir sobre isoterma de cenario coerente com o qmax medido (KL = 0,05 L/mg declarado) - nao e' ajuste de dado",
+    "unidade": "L/mg",
+    "valor": 0.05,
+    "valor_texto": null,
+    "estado": "estimado",
+    "memoria": "KL = a/b do ajuste linearizado de Langmuir",
+    "complemento": {
+     "RL": 0.5,
+     "favoravel": true,
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "KL de Langmuir sobre isoterma de cenario coerente com o qmax medido (KL = 0,05 L/mg declarado) - nao e' ajuste de dado",
+     "rota": "regra:D2",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "regra de Langmuir sobre isoterma de cenario [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D3",
+    "rota": "regra:D3",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "k2 do PSO sobre cinetica de cenario coerente com o qmax medido (k2 = 1,9e-3 g/mg/min declarado) - nao e' ajuste de dado",
+    "unidade": "g/(mg*min)",
+    "valor": 0.0019,
+    "valor_texto": null,
+    "estado": "estimado",
+    "memoria": "PSO t/qt = 1/(k2*qe^2) + t/qe; a=0.010000 b=0.052632",
+    "complemento": {
+     "r2": 1.0,
+     "qe_mg_g": 100.0,
+     "t95_min": 100.0,
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "k2 do PSO sobre cinetica de cenario coerente com o qmax medido (k2 = 1,9e-3 g/mg/min declarado) - nao e' ajuste de dado",
+     "rota": "regra:D3",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "regra PSO sobre cinetica de cenario [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D4",
+    "rota": "motor:seletividade_competitiva/seletividade_alfa",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "alfa de Langmuir entre SMX e ibuprofeno declarados",
+    "unidade": "adimensional",
+    "valor": 2.7722,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "coeficiente de seletividade do primeiro par avaliado (Langmuir competitivo)",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "componente_preferido",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "alfa de Langmuir entre SMX e ibuprofeno declarados",
+     "rota": "motor:seletividade_competitiva/seletividade_alfa",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "seletividade_competitiva sobre qmax/KL declarados [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D5",
+    "rota": "motor:regeneracao_reuso/ciclos_ate_80pct_capacidade",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "ciclos ate 80% da capacidade inicial",
+    "unidade": "ciclos",
+    "valor": 7.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "ciclos ate a capacidade cair a 80% da inicial (ajuste exponencial)",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "eficiencia_regeneracao_pct",
+       "valor": null,
+       "unidade": "%",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "ciclos ate 80% da capacidade inicial",
+     "rota": "motor:regeneracao_reuso/ciclos_ate_80pct_capacidade",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "regeneracao_reuso sobre capacidades declaradas [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D6",
+    "rota": "regra:D6",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "R = (C0-Ce)/C0 com C0 = 20 mg/L e Ce = 0,0072 mg/L declarados",
+    "unidade": "%",
+    "valor": 99.964,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "R = (C0-Ce)/C0 x 100 = (20.0000-0.0072)/20.0000 x 100",
+    "complemento": {
+     "qe_mg_g": 99.964,
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "R = (C0-Ce)/C0 com C0 = 20 mg/L e Ce = 0,0072 mg/L declarados",
+     "rota": "regra:D6",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "regra de remocao sobre C0/Ce do lote declarado [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D7",
+    "rota": "direto",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "janela operacional derivada de pKa do SMX e do PZC",
+    "unidade": "texto",
+    "valor": null,
+    "valor_texto": "pH 5,0-8,0 (SMX anionico a partir de pKa2 5,7; superficie basica com PZC ~ 7,4) e 20-40 C",
+    "estado": "estimado",
+    "memoria": "janela operacional derivada de pKa do SMX e do PZC",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "janela operacional derivada de pKa do SMX e do PZC",
+     "rota": "direto",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "janela derivada de pKa (SMX) e PZC (carvao) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C1",
+    "rota": "motor:perigo_composicao/indice_perigo",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "indice GHS ponderado pela composicao declarada",
+    "unidade": "0-4",
+    "valor": null,
+    "valor_texto": "carvao ativado nao e' classificado como perigoso pelo GHS na forma solida; po respiravel/combustivel no manuseio",
+    "estado": "estimado",
+    "memoria": "indice numerico descartado (cobertura 0.4%)",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "classificacao_perigo",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "indice GHS ponderado pela composicao declarada",
+     "rota": "motor:perigo_composicao/indice_perigo",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "classificacao GHS textual (indice numerico descartado: cobertura baixa da composicao declarada) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C2",
+    "rota": "regra:C2",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "custo = preco declarado (R$ 12/kg) / qmax medido",
+    "unidade": "R$/g removido",
+    "valor": 0.12,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "custo = preco/qmax = 12.0000/100.0000 (1 g = 1000 mg)",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "custo = preco declarado (R$ 12/kg) / qmax medido",
+     "rota": "regra:C2",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "regra de custo com preco declarado [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C3",
+    "rota": "na",
+    "nivel": 0,
+    "nivel_nome": "pendente",
+    "base": "exige dado documental do fornecedor de lignina Kraft ou levantamento de oferta regional; nao ha numero defensavel",
+    "unidade": null,
+    "valor": null,
+    "valor_texto": "exige dado documental do fornecedor de lignina Kraft ou levantamento de oferta regional; nao ha numero defensavel",
+    "estado": "ausente",
+    "memoria": null,
+    "complemento": {
+     "nivel": 0,
+     "nivel_nome": "pendente",
+     "base": "exige dado documental do fornecedor de lignina Kraft ou levantamento de oferta regional; nao ha numero defensavel",
+     "rota": "na",
+     "material": "A"
+    },
+    "faltando": [
+     "oferta_anual_t_ano",
+     "distancia_km"
+    ],
+    "fonte": "pendente: dado documental (nao estimar) [nivel 0: pendente]"
+   },
+   {
+    "codigo": "C4",
+    "rota": "regra:C4",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "E = P*t/m com 2 kW, 2 h, 1 kg declarados",
+    "unidade": "kWh/kg",
+    "valor": 4.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "E = P*t/m = 2.0000 x 2.0000 / 1.0000",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "E = P*t/m com 2 kW, 2 h, 1 kg declarados",
+     "rota": "regra:C4",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "regra energetica com potencia declarada [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C5",
+    "rota": "motor:reciclabilidade/indice_reciclabilidade",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "fator de fim de vida do carvao ativado (0,40)",
+    "unidade": "0-1",
+    "valor": 0.4,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "media ponderada dos fatores por classe",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "massa_reaproveitada_pct",
+       "valor": null,
+       "unidade": "%",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "fator de fim de vida do carvao ativado (0,40)",
+     "rota": "motor:reciclabilidade/indice_reciclabilidade",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "reciclabilidade sobre classe 'carvao ativado' [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C6",
+    "rota": "motor:conformidade_limites/margem_conformidade_pct",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "margem contra limite de referencia declarado",
+    "unidade": "%",
+    "valor": 85.6,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "menor margem percentual entre os analitos avaliados",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "status_conformidade",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "norma": "limite declarado 0,05 mg/L",
+     "aviso": "MS 888/2021 nao fixa limite para sulfametoxazol; a margem e' contra limite de referencia declarado",
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "margem contra limite de referencia declarado",
+     "rota": "motor:conformidade_limites/margem_conformidade_pct",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "conformidade_limites (limite declarado, nao normativo) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C7",
+    "rota": "regra:C7",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "TRH = V/Q com leito de 2 L e vazao de 10 L/h declarados",
+    "unidade": "min",
+    "valor": 12.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "TRH = V/Q = 0.002000/0.010000 h -> min",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "TRH = V/Q com leito de 2 L e vazao de 10 L/h declarados",
+     "rota": "regra:C7",
+     "material": "A"
+    },
+    "faltando": null,
+    "fonte": "regra de TRH com volume e vazao declarados [nivel 3: cenario]"
+   }
+  ],
+  "relatorio": {
+   "componentes": [
+    {
+     "componente": "adsorvente",
+     "gravados": 9,
+     "avisos": []
+    },
+    {
+     "componente": "adsorbato",
+     "gravados": 7,
+     "avisos": []
+    },
+    {
+     "componente": "meio",
+     "gravados": 10,
+     "avisos": []
+    }
+   ],
+   "descritores": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7"
+   ],
+   "erros": [],
+   "conflitos": []
+  },
+  "depois": {
+   "total_avaliado": 28,
+   "com_dado": 26,
+   "sem_dado": 2,
+   "percentual_com_dado": 92.86,
+   "por_estado": {
+    "presente": 3,
+    "calculado": 17,
+    "estimado": 6,
+    "ausente": 1,
+    "nao_aplicavel": 1,
+    "validado": 0
+   },
+   "por_dimensao": {
+    "D1": {
+     "preenchidos": 7,
+     "total": 7,
+     "percentual": 100.0
+    },
+    "D2": {
+     "preenchidos": 6,
+     "total": 7,
+     "percentual": 85.71
+    },
+    "D3": {
+     "preenchidos": 7,
+     "total": 7,
+     "percentual": 100.0
+    },
+    "D4": {
+     "preenchidos": 6,
+     "total": 7,
+     "percentual": 85.71
+    }
+   }
+  }
+ },
+ "B": {
+  "material_id": "mat_358eb4207c9fb795",
+  "nome": "KL-KOH-2:1",
+  "antes": {
+   "total_avaliado": 28,
+   "com_dado": 4,
+   "sem_dado": 24,
+   "percentual_com_dado": 14.29,
+   "por_estado": {
+    "presente": 3,
+    "calculado": 0,
+    "estimado": 1,
+    "ausente": 24,
+    "nao_aplicavel": 0,
+    "validado": 0
+   },
+   "por_dimensao": {
+    "D1": {
+     "preenchidos": 2,
+     "total": 7,
+     "percentual": 28.57
+    },
+    "D2": {
+     "preenchidos": 1,
+     "total": 7,
+     "percentual": 14.29
+    },
+    "D3": {
+     "preenchidos": 1,
+     "total": 7,
+     "percentual": 14.29
+    },
+    "D4": {
+     "preenchidos": 0,
+     "total": 7,
+     "percentual": 0.0
+    }
+   }
+  },
+  "celulas": [
+   {
+    "codigo": "S1",
+    "rota": "motor:composicao_elementar/pureza_pct",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "CHNS declarado; pureza = fracao da fase carbonosa",
+    "unidade": "%",
+    "valor": 91.79,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "soma normalizada dos elementos principais",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "formula_empirica",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "CHNS declarado; pureza = fracao da fase carbonosa",
+     "rota": "motor:composicao_elementar/pureza_pct",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "composicao_elementar sobre CHNS declarado [nivel 3: cenario]"
+   },
+   {
+    "codigo": "S2",
+    "rota": "direto",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "padrao de DRX de carvao ativado; nao ha difratograma do material",
+    "unidade": "texto",
+    "valor": null,
+    "valor_texto": "amorfo: halo largo em 2-theta ~ 24 graus e banda em ~ 43 graus, sem reflexoes de grafite cristalino",
+    "estado": "estimado",
+    "memoria": "padrao de DRX de carvao ativado; nao ha difratograma do material",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "padrao de DRX de carvao ativado; nao ha difratograma do material",
+     "rota": "direto",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "literatura: DRX tipico de carbono ativado (sem difratograma) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "S3",
+    "rota": "banco:S3",
+    "nivel": 1,
+    "nivel_nome": "medido",
+    "base": "BET medido",
+    "unidade": "m2/g",
+    "valor": 963.0,
+    "valor_texto": null,
+    "estado": "presente",
+    "memoria": "valor medido em bancada (nao calculado)",
+    "complemento": {
+     "nivel": 1,
+     "nivel_nome": "medido",
+     "base": "BET medido",
+     "rota": "banco:S3",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "Brazil et al., 2026 (ensaio de bancada) [nivel 1: medido]"
+   },
+   {
+    "codigo": "S4",
+    "rota": "banco:S4",
+    "nivel": 1,
+    "nivel_nome": "medido",
+    "base": "volume de poros medido",
+    "unidade": "cm3/g",
+    "valor": 0.49,
+    "valor_texto": null,
+    "estado": "presente",
+    "memoria": "valor medido em bancada (nao calculado)",
+    "complemento": {
+     "nivel": 1,
+     "nivel_nome": "medido",
+     "base": "volume de poros medido",
+     "rota": "banco:S4",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "Brazil et al., 2026 (ensaio de bancada) [nivel 1: medido]"
+   },
+   {
+    "codigo": "S5",
+    "rota": "direto",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "po moido e peneirado; d50 da faixa < 75 um",
+    "unidade": "um",
+    "valor": 45.0,
+    "valor_texto": null,
+    "estado": "estimado",
+    "memoria": "po moido e peneirado; d50 da faixa < 75 um",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "po moido e peneirado; d50 da faixa < 75 um",
+     "rota": "direto",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "granulometria declarada do processo de moagem [nivel 3: cenario]"
+   },
+   {
+    "codigo": "S6",
+    "rota": "motor:boehm_grupos/acidos_totais_mmol_g",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "titulacao de Boehm declarada",
+    "unidade": "mmol/g",
+    "valor": 0.8,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "acidez total de superficie por NaOH",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "sitios_basicos_mmol_g",
+       "valor": null,
+       "unidade": "mmol/g",
+       "memoria": "sitios basicos (HCl) como suporte"
+      },
+      {
+       "chave": "carboxilicas_mmol_g",
+       "valor": null,
+       "unidade": "mmol/g",
+       "memoria": null
+      },
+      {
+       "chave": "fenolicas_mmol_g",
+       "valor": null,
+       "unidade": "mmol/g",
+       "memoria": null
+      },
+      {
+       "chave": "lactonas_mmol_g",
+       "valor": null,
+       "unidade": "mmol/g",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "titulacao de Boehm declarada",
+     "rota": "motor:boehm_grupos/acidos_totais_mmol_g",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "boehm_grupos sobre consumos declarados [nivel 3: cenario]"
+   },
+   {
+    "codigo": "S7",
+    "rota": "motor:granulometria_psd/d50_um",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "d50 da distribuicao declarada",
+    "unidade": "um",
+    "valor": 30.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "D50 por interpolacao da distribuicao acumulada",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "span",
+       "valor": null,
+       "unidade": "adimensional",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "d50 da distribuicao declarada",
+     "rota": "motor:granulometria_psd/d50_um",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "granulometria_psd sobre diametros declarados [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P1",
+    "rota": "regra:P1",
+    "nivel": 2,
+    "nivel_nome": "derivado",
+    "base": "rho_ap = 1/(V_p + 1/rho_verdadeira) com V_p medido (S4) e rho_verdadeira = 1,90 g/cm3 declarada",
+    "unidade": "g/cm3",
+    "valor": 0.983946,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "rho = m/V = 0.9839/1.0000",
+    "complemento": {
+     "nivel": 2,
+     "nivel_nome": "derivado",
+     "base": "rho_ap = 1/(V_p + 1/rho_verdadeira) com V_p medido (S4) e rho_verdadeira = 1,90 g/cm3 declarada",
+     "rota": "regra:P1",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "derivado de S4 (medido) + densidade do esqueleto declarada [nivel 2: derivado]"
+   },
+   {
+    "codigo": "P2",
+    "rota": "motor:pzc_deriva_ph/pzc",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "deriva de pH declarada",
+    "unidade": "pH",
+    "valor": 7.2,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "PZC por interpolacao da deriva de pH (dPH=0)",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "deriva de pH declarada",
+     "rota": "motor:pzc_deriva_ph/pzc",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "pzc_deriva_ph sobre serie de pH declarada [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P3",
+    "rota": "regra:P3",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "titulacao de CTC declarada",
+    "unidade": "cmol/kg",
+    "valor": 30.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "CTC = (25.000-23.500) x 0.1000 x 1.00 x 100 / 0.5000",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "titulacao de CTC declarada",
+     "rota": "regra:P3",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "regra CTC sobre volumes declarados [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P4",
+    "rota": "motor:angulo_contato/energia_superficial_mN_m",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "energia superficial por Owens-Wendt com angulos declarados",
+    "unidade": "mN/m",
+    "valor": 28.59,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "energia superficial total por OWRK com dois liquidos",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "energia superficial por Owens-Wendt com angulos declarados",
+     "rota": "motor:angulo_contato/energia_superficial_mN_m",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "angulo_contato (agua 95 graus, diiodometano 60 graus) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P5",
+    "rota": "motor:tga_tangente/onset_C",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "onset da tangente na curva TGA declarada",
+    "unidade": "C",
+    "valor": 429.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "onset de decomposicao por tangente no pico de dTG",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "residuo_pct",
+       "valor": null,
+       "unidade": "%",
+       "memoria": null
+      },
+      {
+       "chave": "umidade_pct",
+       "valor": null,
+       "unidade": "%",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "onset da tangente na curva TGA declarada",
+     "rota": "motor:tga_tangente/onset_C",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "tga_tangente sobre curva declarada (10 C/min) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "P6",
+    "rota": "na",
+    "nivel": 4,
+    "nivel_nome": "n/a",
+    "base": "adsorcao no escuro sem fotocatalise/eletroassistencia: banda proibida nao governa o processo; o valor 2,0 eV que estava na matriz era o padrao interno do sim_dft, nao propriedade do material",
+    "unidade": null,
+    "valor": null,
+    "valor_texto": "adsorcao no escuro sem fotocatalise/eletroassistencia: banda proibida nao governa o processo; o valor 2,0 eV que estava na matriz era o padrao interno do sim_dft, nao propriedade do material",
+    "estado": "nao_aplicavel",
+    "memoria": null,
+    "complemento": {
+     "nivel": 4,
+     "nivel_nome": "n/a",
+     "base": "adsorcao no escuro sem fotocatalise/eletroassistencia: banda proibida nao governa o processo; o valor 2,0 eV que estava na matriz era o padrao interno do sim_dft, nao propriedade do material",
+     "rota": "na",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "nao aplicavel ao uso em estudo (ver PLANO §2.4) [nivel 4: n/a]"
+   },
+   {
+    "codigo": "P7",
+    "rota": "motor:lixiviacao_cinetica/lixiviacao_pct",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "lixiviacao acumulada declarada",
+    "unidade": "%",
+    "valor": 1.2,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "fracao lixiviada final ajustada por nucleo encolhendo",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "modelo_lixiviacao",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "lixiviacao acumulada declarada",
+     "rota": "motor:lixiviacao_cinetica/lixiviacao_pct",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "lixiviacao_cinetica sobre serie declarada [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D1",
+    "rota": "banco:D1",
+    "nivel": 1,
+    "nivel_nome": "medido",
+    "base": "qmax medido",
+    "unidade": "mg/g",
+    "valor": 100.0,
+    "valor_texto": null,
+    "estado": "presente",
+    "memoria": "valor medido em bancada (nao calculado)",
+    "complemento": {
+     "nivel": 1,
+     "nivel_nome": "medido",
+     "base": "qmax medido",
+     "rota": "banco:D1",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "Brazil et al., 2026 (ensaio de bancada) [nivel 1: medido]"
+   },
+   {
+    "codigo": "D2",
+    "rota": "regra:D2",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "KL de Langmuir sobre isoterma de cenario coerente com o qmax medido (KL = 0,05 L/mg declarado) - nao e' ajuste de dado",
+    "unidade": "L/mg",
+    "valor": 0.05,
+    "valor_texto": null,
+    "estado": "estimado",
+    "memoria": "KL = a/b do ajuste linearizado de Langmuir",
+    "complemento": {
+     "RL": 0.5,
+     "favoravel": true,
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "KL de Langmuir sobre isoterma de cenario coerente com o qmax medido (KL = 0,05 L/mg declarado) - nao e' ajuste de dado",
+     "rota": "regra:D2",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "regra de Langmuir sobre isoterma de cenario [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D3",
+    "rota": "regra:D3",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "k2 do PSO sobre cinetica de cenario coerente com o qmax medido (k2 = 1,9e-3 g/mg/min declarado) - nao e' ajuste de dado",
+    "unidade": "g/(mg*min)",
+    "valor": 0.0019,
+    "valor_texto": null,
+    "estado": "estimado",
+    "memoria": "PSO t/qt = 1/(k2*qe^2) + t/qe; a=0.010000 b=0.052632",
+    "complemento": {
+     "r2": 1.0,
+     "qe_mg_g": 100.0,
+     "t95_min": 100.0,
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "k2 do PSO sobre cinetica de cenario coerente com o qmax medido (k2 = 1,9e-3 g/mg/min declarado) - nao e' ajuste de dado",
+     "rota": "regra:D3",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "regra PSO sobre cinetica de cenario [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D4",
+    "rota": "motor:seletividade_competitiva/seletividade_alfa",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "alfa de Langmuir entre SMX e ibuprofeno declarados",
+    "unidade": "adimensional",
+    "valor": 2.7722,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "coeficiente de seletividade do primeiro par avaliado (Langmuir competitivo)",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "componente_preferido",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "alfa de Langmuir entre SMX e ibuprofeno declarados",
+     "rota": "motor:seletividade_competitiva/seletividade_alfa",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "seletividade_competitiva sobre qmax/KL declarados [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D5",
+    "rota": "motor:regeneracao_reuso/ciclos_ate_80pct_capacidade",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "ciclos ate 80% da capacidade inicial",
+    "unidade": "ciclos",
+    "valor": 7.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "ciclos ate a capacidade cair a 80% da inicial (ajuste exponencial)",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "eficiencia_regeneracao_pct",
+       "valor": null,
+       "unidade": "%",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "ciclos ate 80% da capacidade inicial",
+     "rota": "motor:regeneracao_reuso/ciclos_ate_80pct_capacidade",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "regeneracao_reuso sobre capacidades declaradas [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D6",
+    "rota": "regra:D6",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "R = (C0-Ce)/C0 com C0 = 20 mg/L e Ce = 0,0072 mg/L declarados",
+    "unidade": "%",
+    "valor": 99.964,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "R = (C0-Ce)/C0 x 100 = (20.0000-0.0072)/20.0000 x 100",
+    "complemento": {
+     "qe_mg_g": 99.964,
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "R = (C0-Ce)/C0 com C0 = 20 mg/L e Ce = 0,0072 mg/L declarados",
+     "rota": "regra:D6",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "regra de remocao sobre C0/Ce do lote declarado [nivel 3: cenario]"
+   },
+   {
+    "codigo": "D7",
+    "rota": "direto",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "janela operacional derivada de pKa do SMX e do PZC",
+    "unidade": "texto",
+    "valor": null,
+    "valor_texto": "pH 5,0-8,0 (SMX anionico a partir de pKa2 5,7; superficie basica com PZC ~ 7,4) e 20-40 C",
+    "estado": "estimado",
+    "memoria": "janela operacional derivada de pKa do SMX e do PZC",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "janela operacional derivada de pKa do SMX e do PZC",
+     "rota": "direto",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "janela derivada de pKa (SMX) e PZC (carvao) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C1",
+    "rota": "motor:perigo_composicao/indice_perigo",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "indice GHS ponderado pela composicao declarada",
+    "unidade": "0-4",
+    "valor": null,
+    "valor_texto": "carvao ativado nao e' classificado como perigoso pelo GHS na forma solida; po respiravel/combustivel no manuseio",
+    "estado": "estimado",
+    "memoria": "indice numerico descartado (cobertura 0.4%)",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "classificacao_perigo",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "indice GHS ponderado pela composicao declarada",
+     "rota": "motor:perigo_composicao/indice_perigo",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "classificacao GHS textual (indice numerico descartado: cobertura baixa da composicao declarada) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C2",
+    "rota": "regra:C2",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "custo = preco declarado (R$ 12/kg) / qmax medido",
+    "unidade": "R$/g removido",
+    "valor": 0.12,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "custo = preco/qmax = 12.0000/100.0000 (1 g = 1000 mg)",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "custo = preco declarado (R$ 12/kg) / qmax medido",
+     "rota": "regra:C2",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "regra de custo com preco declarado [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C3",
+    "rota": "na",
+    "nivel": 0,
+    "nivel_nome": "pendente",
+    "base": "exige dado documental do fornecedor de lignina Kraft ou levantamento de oferta regional; nao ha numero defensavel",
+    "unidade": null,
+    "valor": null,
+    "valor_texto": "exige dado documental do fornecedor de lignina Kraft ou levantamento de oferta regional; nao ha numero defensavel",
+    "estado": "ausente",
+    "memoria": null,
+    "complemento": {
+     "nivel": 0,
+     "nivel_nome": "pendente",
+     "base": "exige dado documental do fornecedor de lignina Kraft ou levantamento de oferta regional; nao ha numero defensavel",
+     "rota": "na",
+     "material": "B"
+    },
+    "faltando": [
+     "oferta_anual_t_ano",
+     "distancia_km"
+    ],
+    "fonte": "pendente: dado documental (nao estimar) [nivel 0: pendente]"
+   },
+   {
+    "codigo": "C4",
+    "rota": "regra:C4",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "E = P*t/m com 2 kW, 2 h, 1 kg declarados",
+    "unidade": "kWh/kg",
+    "valor": 4.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "E = P*t/m = 2.0000 x 2.0000 / 1.0000",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "E = P*t/m com 2 kW, 2 h, 1 kg declarados",
+     "rota": "regra:C4",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "regra energetica com potencia declarada [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C5",
+    "rota": "motor:reciclabilidade/indice_reciclabilidade",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "fator de fim de vida do carvao ativado (0,40)",
+    "unidade": "0-1",
+    "valor": 0.4,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "media ponderada dos fatores por classe",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "massa_reaproveitada_pct",
+       "valor": null,
+       "unidade": "%",
+       "memoria": null
+      }
+     ],
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "fator de fim de vida do carvao ativado (0,40)",
+     "rota": "motor:reciclabilidade/indice_reciclabilidade",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "reciclabilidade sobre classe 'carvao ativado' [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C6",
+    "rota": "motor:conformidade_limites/margem_conformidade_pct",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "margem contra limite de referencia declarado",
+    "unidade": "%",
+    "valor": 85.6,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "menor margem percentual entre os analitos avaliados",
+    "complemento": {
+     "apoio": [
+      {
+       "chave": "status_conformidade",
+       "valor": null,
+       "unidade": "texto",
+       "memoria": null
+      }
+     ],
+     "norma": "limite declarado 0,05 mg/L",
+     "aviso": "MS 888/2021 nao fixa limite para sulfametoxazol; a margem e' contra limite de referencia declarado",
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "margem contra limite de referencia declarado",
+     "rota": "motor:conformidade_limites/margem_conformidade_pct",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "conformidade_limites (limite declarado, nao normativo) [nivel 3: cenario]"
+   },
+   {
+    "codigo": "C7",
+    "rota": "regra:C7",
+    "nivel": 3,
+    "nivel_nome": "cenario",
+    "base": "TRH = V/Q com leito de 2 L e vazao de 10 L/h declarados",
+    "unidade": "min",
+    "valor": 12.0,
+    "valor_texto": null,
+    "estado": "calculado",
+    "memoria": "TRH = V/Q = 0.002000/0.010000 h -> min",
+    "complemento": {
+     "nivel": 3,
+     "nivel_nome": "cenario",
+     "base": "TRH = V/Q com leito de 2 L e vazao de 10 L/h declarados",
+     "rota": "regra:C7",
+     "material": "B"
+    },
+    "faltando": null,
+    "fonte": "regra de TRH com volume e vazao declarados [nivel 3: cenario]"
+   }
+  ],
+  "relatorio": {
+   "componentes": [
+    {
+     "componente": "adsorvente",
+     "gravados": 9,
+     "avisos": []
+    },
+    {
+     "componente": "adsorbato",
+     "gravados": 7,
+     "avisos": []
+    },
+    {
+     "componente": "meio",
+     "gravados": 10,
+     "avisos": []
+    }
+   ],
+   "descritores": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7"
+   ],
+   "erros": [],
+   "conflitos": []
+  },
+  "depois": {
+   "total_avaliado": 28,
+   "com_dado": 26,
+   "sem_dado": 2,
+   "percentual_com_dado": 92.86,
+   "por_estado": {
+    "presente": 3,
+    "calculado": 17,
+    "estimado": 6,
+    "ausente": 1,
+    "nao_aplicavel": 1,
+    "validado": 0
+   },
+   "por_dimensao": {
+    "D1": {
+     "preenchidos": 7,
+     "total": 7,
+     "percentual": 100.0
+    },
+    "D2": {
+     "preenchidos": 6,
+     "total": 7,
+     "percentual": 85.71
+    },
+    "D3": {
+     "preenchidos": 7,
+     "total": 7,
+     "percentual": 100.0
+    },
+    "D4": {
+     "preenchidos": 6,
+     "total": 7,
+     "percentual": 85.71
+    }
+   }
+  }
+ }
+}

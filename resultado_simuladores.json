@@ -1,0 +1,2610 @@
+[
+ {
+  "simulador": "angulo_contato",
+  "parametros": {
+   "angulo_agua_deg": 95.0,
+   "angulo_diiodometano_deg": 60.0
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "angulo_contato",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Quimica de superficie - molhabilidade",
+   "requisitos": [
+    {
+     "chave": "angulo_agua_deg",
+     "unidade": "graus",
+     "obrigatorio": true,
+     "descricao": "angulo de contato com agua"
+    },
+    {
+     "chave": "angulo_diiodometano_deg",
+     "unidade": "graus",
+     "obrigatorio": false,
+     "descricao": "angulo com diiodometano (necessario para energia superficial)"
+    },
+    {
+     "chave": "gama_agua",
+     "unidade": "mN/m",
+     "obrigatorio": false,
+     "descricao": "tensao da agua medida (padrao 72,8)"
+    },
+    {
+     "chave": "gama_diiodometano",
+     "unidade": "mN/m",
+     "obrigatorio": false,
+     "descricao": "tensao do diiodometano (padrao 50,8)"
+    }
+   ],
+   "le_chaves": [
+    "angulo_agua_deg",
+    "angulo_diiodometano_deg",
+    "gama_agua",
+    "gama_diiodometano"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "gama_agua",
+   "gama_diiodometano"
+  ],
+  "motivo": "o motor usa padrao interno para: gama_agua, gama_diiodometano",
+  "descritores": [
+   {
+    "codigo": "P4",
+    "modo": "valor",
+    "chave": "energia_superficial_mN_m",
+    "unidade": "mN/m",
+    "fonte": "None (saida energia_superficial_mN_m)",
+    "memoria": "energia superficial total por OWRK com dois liquidos",
+    "valor": 28.59,
+    "estado": "calculado"
+   }
+  ],
+  "avisos": [
+   "saida 'trabalho_adesao_agua_mJ_m2' ausente no resultado de angulo_contato"
+  ],
+  "resultado": {
+   "simulador": "angulo_contato",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "Owens-Wendt-Rabel-Kaelble (1969) + Young-Dupre",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "analitico",
+   "resultado": {
+    "angulo_agua_deg": 95.0,
+    "trabalho_adesao_agua_mJ_m2": 66.46,
+    "classe": "hidrofobico",
+    "cos_angulo": -0.0872,
+    "energia_superficial_mN_m": 28.59,
+    "componente_dispersiva_mN_m": 27.02,
+    "componente_polar_mN_m": 1.57,
+    "angulo_diiodometano_deg": 60.0,
+    "polaridade_pct": 5.5
+   },
+   "limitacoes": [
+    "angulo medido em substrato plano; po e' usualmente avaliado por Washburn/coluna capilar",
+    "classificacao hidrofilico/hidrofobico usa 60 e 90 graus",
+    "energia superficial por OWRK depende das tensoes dos liquidos de referencia informadas/das tabelas"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "energia_superficial_mN_m": 28.59,
+   "trabalho_adesao_mJ_m2": 66.46,
+   "classe_molhabilidade": "hidrofobico"
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.025,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "angulo_agua_deg": 95.0,
+   "angulo_diiodometano_deg": 60.0
+  }
+ },
+ {
+  "simulador": "boehm_grupos",
+  "parametros": {
+   "naoh_mmol_g": 0.8,
+   "na2co3_mmol_g": 0.5,
+   "nahco3_mmol_g": 0.3,
+   "hcl_mmol_g": 0.2
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "boehm_grupos",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Quimica de superficie - grupos funcionais",
+   "requisitos": [
+    {
+     "chave": "nahco3_mmol_g",
+     "unidade": "mmol/g",
+     "obrigatorio": false,
+     "descricao": "consumo de NaHCO3 (carboxilicos)"
+    },
+    {
+     "chave": "na2co3_mmol_g",
+     "unidade": "mmol/g",
+     "obrigatorio": false,
+     "descricao": "consumo de Na2CO3 (carboxilicos + lactonas)"
+    },
+    {
+     "chave": "naoh_mmol_g",
+     "unidade": "mmol/g",
+     "obrigatorio": false,
+     "descricao": "consumo de NaOH (acidez total)"
+    },
+    {
+     "chave": "hcl_mmol_g",
+     "unidade": "mmol/g",
+     "obrigatorio": false,
+     "descricao": "consumo de HCl (sitios basicos)"
+    },
+    {
+     "chave": "massa_g",
+     "unidade": "g",
+     "obrigatorio": false,
+     "descricao": "massa quando se informa volume consumido"
+    },
+    {
+     "chave": "concentracao_mol_L",
+     "unidade": "mol/L",
+     "obrigatorio": false,
+     "descricao": "titulante em mol/L"
+    },
+    {
+     "chave": "volume_mL",
+     "unidade": "mL",
+     "obrigatorio": false,
+     "descricao": "volume de titulante consumido"
+    }
+   ],
+   "le_chaves": [
+    "naoh_mmol_g",
+    "na2co3_mmol_g",
+    "nahco3_mmol_g",
+    "hcl_mmol_g",
+    "massa_g",
+    "concentracao_mol_L",
+    "volume_mL",
+    "consumos_mmol"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "massa_g",
+   "concentracao_mol_L",
+   "volume_mL",
+   "consumos_mmol"
+  ],
+  "motivo": "o motor usa padrao interno para: massa_g, concentracao_mol_L, volume_mL, consumos_mmol",
+  "descritores": [
+   {
+    "codigo": "S6",
+    "modo": "valor",
+    "chave": "acidos_totais_mmol_g",
+    "unidade": "mmol/g",
+    "fonte": "None (saida acidos_totais_mmol_g)",
+    "memoria": "acidez total de superficie por NaOH",
+    "valor": 0.8,
+    "estado": "calculado"
+   },
+   {
+    "codigo": "S6",
+    "modo": "apoio",
+    "chave": "sitios_basicos_mmol_g",
+    "unidade": "mmol/g",
+    "fonte": "None (saida sitios_basicos_mmol_g)",
+    "memoria": "sitios basicos (HCl) como suporte",
+    "valor": null,
+    "valor_apoio": 0.2
+   },
+   {
+    "codigo": "S6",
+    "modo": "apoio",
+    "chave": "carboxilicas_mmol_g",
+    "unidade": "mmol/g",
+    "fonte": "None (saida carboxilicas_mmol_g)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": 0.3
+   },
+   {
+    "codigo": "S6",
+    "modo": "apoio",
+    "chave": "fenolicas_mmol_g",
+    "unidade": "mmol/g",
+    "fonte": "None (saida fenolicas_mmol_g)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": 0.3
+   },
+   {
+    "codigo": "S6",
+    "modo": "apoio",
+    "chave": "lactonas_mmol_g",
+    "unidade": "mmol/g",
+    "fonte": "None (saida lactonas_mmol_g)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": 0.2
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "boehm_grupos",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "titulacao_de_Boehm (Boehm 1964)",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "analitico",
+   "resultado": {
+    "carboxilicas_mmol_g": 0.3,
+    "lactonas_mmol_g": 0.2,
+    "fenolicas_mmol_g": 0.3,
+    "acidos_totais_mmol_g": 0.8,
+    "sitios_basicos_mmol_g": 0.2,
+    "soma_acidica_grupos_mmol_g": 0.8,
+    "razao_base_acido": 0.25
+   },
+   "limitacoes": [
+    "a atribuicao carboxilico/lactona/fenol depende do metodo de Boehm classico; amostras com muitos sitios podem desviar",
+    "exige branco de titulante e tempo de equilibrio documentado"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "acidos_totais_mmol_g": 0.8,
+   "sitios_basicos_mmol_g": 0.2,
+   "carboxilicas_mmol_g": 0.3,
+   "fenolicas_mmol_g": 0.3,
+   "lactonas_mmol_g": 0.2
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.016,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "naoh_mmol_g": 0.8,
+   "na2co3_mmol_g": 0.5,
+   "nahco3_mmol_g": 0.3,
+   "hcl_mmol_g": 0.2
+  }
+ },
+ {
+  "simulador": "cfd",
+  "parametros": {
+   "densidade": 997.0,
+   "velocidade": 0.01,
+   "diametro": 0.005,
+   "viscosidade": 0.001
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "cfd",
+   "motor": "universal.sim_cfd",
+   "tipo_fonte": "calculo",
+   "dominio": "Fisica - Fluidos",
+   "requisitos": [
+    {
+     "chave": "densidade",
+     "unidade": "kg/m3",
+     "obrigatorio": true,
+     "descricao": "massa especifica do fluido"
+    },
+    {
+     "chave": "velocidade",
+     "unidade": "m/s",
+     "obrigatorio": true,
+     "descricao": "velocidade superficial no leito"
+    },
+    {
+     "chave": "diametro",
+     "unidade": "m",
+     "obrigatorio": true,
+     "descricao": "diametro caracteristico do leito/particula"
+    },
+    {
+     "chave": "viscosidade",
+     "unidade": "Pa.s",
+     "obrigatorio": false,
+     "descricao": "viscosidade dinamica (padrao 1e-3)"
+    }
+   ],
+   "le_chaves": [
+    "densidade",
+    "diametro",
+    "velocidade",
+    "viscosidade"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "C7",
+    "modo": "apoio",
+    "chave": "Reynolds",
+    "unidade": "adimensional",
+    "fonte": "universal.sim_cfd (saida Reynolds)",
+    "memoria": "numero de Reynolds do escoamento no leito; apoia a avaliacao de escalonamento, nao e' TRH",
+    "valor": null,
+    "valor_apoio": 49.85
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "CFD (OpenFOAM)",
+   "dominio": "Engenharia - Fluidos",
+   "densidade_kgm3": 997.0,
+   "velocidade_ms": 0.01,
+   "diametro_m": 0.005,
+   "viscosidade_Pas": 0.001,
+   "Reynolds": 49.85,
+   "regime": "laminar",
+   "validacao": "Reynolds: 50 (laminar)"
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.03,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok",
+  "parametros_usados": {
+   "densidade": 997.0,
+   "velocidade": 0.01,
+   "diametro": 0.005,
+   "viscosidade": 0.001
+  }
+ },
+ {
+  "simulador": "composicao_elementar",
+  "parametros": {
+   "elementos_pct": {
+    "C": 80.0,
+    "H": 2.5,
+    "N": 0.5,
+    "S": 0.3
+   },
+   "elementos_principais": [
+    "C",
+    "H",
+    "N",
+    "S"
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "composicao_elementar",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Estrutura - composicao elementar",
+   "requisitos": [
+    {
+     "chave": "elementos_pct",
+     "unidade": "dict",
+     "obrigatorio": true,
+     "descricao": "simbolo -> percentual massico"
+    },
+    {
+     "chave": "elementos_principais",
+     "unidade": "lista",
+     "obrigatorio": false,
+     "descricao": "elementos que compoem a fase principal (define a pureza)"
+    },
+    {
+     "chave": "formula_declarada",
+     "unidade": "texto",
+     "obrigatorio": false,
+     "descricao": "formula esperada para comparacao (ex.: Fe2O3)"
+    }
+   ],
+   "le_chaves": [
+    "elementos_pct",
+    "formula_declarada",
+    "elementos_principais"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "formula_declarada"
+  ],
+  "motivo": "o motor usa padrao interno para: formula_declarada",
+  "descritores": [
+   {
+    "codigo": "S1",
+    "modo": "valor",
+    "chave": "pureza_pct",
+    "unidade": "%",
+    "fonte": "None (saida pureza_pct)",
+    "memoria": "soma normalizada dos elementos principais",
+    "valor": 100.0,
+    "estado": "calculado"
+   },
+   {
+    "codigo": "S1",
+    "modo": "apoio",
+    "chave": "formula_empirica",
+    "unidade": "texto",
+    "fonte": "None (saida formula_empirica)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": "C711.79H265N4S"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "composicao_elementar",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "normalizacao elementar + formula empirica",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "analitico",
+   "resultado": {
+    "soma_medida_pct": 83.3,
+    "desvio_normalizacao_pct": -16.7,
+    "normalizado_pct": {
+     "C": 96.038,
+     "H": 3.001,
+     "N": 0.6,
+     "S": 0.36
+    },
+    "pureza_pct": 100.0,
+    "impurezas": [],
+    "formula_empirica": "C711.79H265N4S",
+    "razoes_molares": {
+     "C": 711.792,
+     "H": 265.046,
+     "N": 3.815,
+     "S": 1.0
+    },
+    "elementos_nao_inteiros": [
+     "C"
+    ],
+    "massa_molar_formula_empirica_g_mol": 8904.52
+   },
+   "limitacoes": [
+    "percentual por XRF/EDS tem limite de deteccao por elemento (leves como C e O pioram em EDS)",
+    "pureza e' a soma dos elementos declarados como principais: lista incompleta subestima a pureza",
+    "formula empirica nao identifica fase: combinar com XRD"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "pureza_pct": 100.0,
+   "formula_empirica": "C711.79H265N4S",
+   "massa_molar_g_mol": 8904.52
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.006,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "elementos_pct": {
+    "C": 80.0,
+    "H": 2.5,
+    "N": 0.5,
+    "S": 0.3
+   },
+   "elementos_principais": [
+    "C",
+    "H",
+    "N",
+    "S"
+   ]
+  }
+ },
+ {
+  "simulador": "conformidade_limites",
+  "parametros": {
+   "analitos": {
+    "sulfametoxazol": 0.0072
+   },
+   "limites": {
+    "sulfametoxazol": 0.05
+   }
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "conformidade_limites",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Contexto - conformidade normativa",
+   "requisitos": [
+    {
+     "chave": "analitos",
+     "unidade": "mg/L",
+     "obrigatorio": true,
+     "descricao": "dict nome -> valor medido"
+    },
+    {
+     "chave": "norma",
+     "unidade": "texto",
+     "obrigatorio": false,
+     "descricao": "ms_888_2021 (padrao) ou conama_430_2011"
+    },
+    {
+     "chave": "limites",
+     "unidade": "dict",
+     "obrigatorio": false,
+     "descricao": "limites proprios (sobrescreve a tabela)"
+    }
+   ],
+   "le_chaves": [
+    "analitos",
+    "norma",
+    "limites"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "norma"
+  ],
+  "motivo": "o motor usa padrao interno para: norma",
+  "descritores": [
+   {
+    "codigo": "C6",
+    "modo": "valor",
+    "chave": "margem_conformidade_pct",
+    "unidade": "%",
+    "fonte": "None (saida margem_conformidade_pct)",
+    "memoria": "menor margem percentual entre os analitos avaliados",
+    "valor": 85.6,
+    "estado": "calculado"
+   },
+   {
+    "codigo": "C6",
+    "modo": "apoio",
+    "chave": "status_conformidade",
+    "unidade": "texto",
+    "fonte": "None (saida status_conformidade)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": "conforme"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "conformidade_limites",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "comparacao com limite normativo (Portaria GM/MS 888/2021 - agua para consumo humano)",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "tabela_curada",
+   "resultado": {
+    "status_geral": "conforme",
+    "resultados": [
+     {
+      "parametro": "sulfametoxazol",
+      "valor": 0.0072,
+      "limite": 0.05,
+      "tipo_limite": "maximo",
+      "unidade": "mg/L",
+      "margem_pct": 85.6,
+      "status": "atende"
+     }
+    ],
+    "falhas": [],
+    "nao_avaliados": [],
+    "norma": "Portaria GM/MS 888/2021 - agua para consumo humano",
+    "jurisdicao": "Brasil (federal)",
+    "consultado_em": "2026-11-03",
+    "total_avaliados": 1,
+    "margem_conformidade_pct": 85.6
+   },
+   "limitacoes": [
+    "a vigencia e a redacao da norma devem ser conferidas na fonte oficial antes de decisao regulatoria",
+    "comparacao usa o valor medido como esta: informe media de replicatas e incerteza no registro da medicao",
+    "normas municipais/estaduais podem ser mais restritivas"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "margem_conformidade_pct": 85.6,
+   "status_conformidade": "conforme",
+   "falhas_conformidade": []
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.004,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "analitos": {
+    "sulfametoxazol": 0.0072
+   },
+   "limites": {
+    "sulfametoxazol": 0.05
+   }
+  }
+ },
+ {
+  "simulador": "cristalografia",
+  "parametros": {
+   "parametro_rede": 3.5,
+   "n": 1,
+   "angulo": 30.0
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "cristalografia",
+   "motor": "universal.sim_cristalografia",
+   "tipo_fonte": "motor_real",
+   "dominio": "Materiais - Cristalografia",
+   "requisitos": [
+    {
+     "chave": "parametro_rede",
+     "unidade": "angstrom",
+     "obrigatorio": true,
+     "descricao": "parametro de rede da fase cristalina"
+    },
+    {
+     "chave": "n",
+     "unidade": "adimensional",
+     "obrigatorio": false,
+     "descricao": "ordem de difracao (padrao 1)"
+    },
+    {
+     "chave": "angulo",
+     "unidade": "graus",
+     "obrigatorio": false,
+     "descricao": "angulo de difracao (padrao 90)"
+    }
+   ],
+   "le_chaves": [
+    "angulo",
+    "n",
+    "parametro_rede",
+    "parametro_rede_m"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "S2",
+    "modo": "apoio",
+    "chave": "d_espacamento_m",
+    "unidade": "m",
+    "fonte": "universal.sim_cristalografia (saida d_espacamento_m)",
+    "memoria": "espacamento interplanar calculado (Lei de Bragg)",
+    "valor": null,
+    "valor_apoio": 1.5400000000000004e-10
+   }
+  ],
+  "avisos": [
+   "saida 'densidade_g_cm3' ausente no resultado de cristalografia"
+  ],
+  "resultado": {
+   "simulador": "Cristalografia (Bragg)",
+   "dominio": "Materiais - Cristalografia",
+   "parametro_rede_m": 3.5,
+   "angulo_graus": 30.0,
+   "d_espacamento_m": 1.5400000000000004e-10,
+   "lambda_X_nm": 0.154,
+   "validacao": "Espacamento interplanar: 1.540 A",
+   "motor_situacao": "motor_falhou: ModuleNotFoundError: No module named 'pymatgen'",
+   "motor_prazo_s": 25.0
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.108,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok",
+  "parametros_usados": {
+   "parametro_rede": 3.5,
+   "n": 1,
+   "angulo": 30.0
+  }
+ },
+ {
+  "simulador": "dft",
+  "parametros": {
+   "material": "carbono"
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "dft",
+   "motor": "universal.sim_dft",
+   "tipo_fonte": "calculo",
+   "dominio": "Materiais - DFT",
+   "requisitos": [
+    {
+     "chave": "material",
+     "unidade": "texto",
+     "obrigatorio": true,
+     "descricao": "nome da fase/material consultado na base do motor"
+    }
+   ],
+   "le_chaves": [
+    "material"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "P6",
+    "modo": "valor",
+    "chave": "bandgap_eV",
+    "unidade": "eV",
+    "fonte": "universal.sim_dft (saida bandgap_eV)",
+    "memoria": "band gap de referencia interna do simulador (declarado pelo proprio motor como 'nao DFT'); nao e' medicao do material em estudo",
+    "valor": 2.0,
+    "estado": "estimado"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "Referencias internas de bandgap (nao DFT)",
+   "dominio": "Materiais - DFT",
+   "material": "carbono",
+   "bandgap_eV": 2.0,
+   "tipo": "indireto",
+   "validacao": "Bandgap de 2.0 eV para carbono"
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.014,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok",
+  "parametros_usados": {
+   "material": "carbono"
+  }
+ },
+ {
+  "simulador": "equilibrio",
+  "parametros": {
+   "dG0": -5000.0,
+   "T": 298.15
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "equilibrio",
+   "motor": "universal.sim_equilibrio",
+   "tipo_fonte": "calculo",
+   "dominio": "Quimica - Equilibrio",
+   "requisitos": [
+    {
+     "chave": "dG0",
+     "unidade": "J/mol",
+     "obrigatorio": true,
+     "descricao": "energia livre padrao da interacao adsorvente-adsorbato"
+    },
+    {
+     "chave": "T",
+     "unidade": "K",
+     "obrigatorio": true,
+     "descricao": "temperatura absoluta"
+    }
+   ],
+   "le_chaves": [
+    "T",
+    "dG0"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "D7",
+    "modo": "apoio",
+    "chave": "K_equilibrio",
+    "unidade": "adimensional",
+    "fonte": "universal.sim_equilibrio (saida K_equilibrio)",
+    "memoria": "constante termodinamica K=exp(-dG0/RT); indica espontaneidade, nao faixa de pH",
+    "valor": null,
+    "valor_apoio": 7.516416600251584
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "Equilibrio Quimico (Gibbs)",
+   "dominio": "Quimica - Equilibrio",
+   "dG0_Jmol": -5000.0,
+   "T_K": 298.15,
+   "K_equilibrio": 7.516416600251584,
+   "espontaneo": true,
+   "validacao": "K = 7.52e+00, reacao espontanea"
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.014,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok",
+  "parametros_usados": {
+   "dG0": -5000.0,
+   "T": 298.15
+  }
+ },
+ {
+  "simulador": "fluido",
+  "parametros": {
+   "densidade": 997.0,
+   "velocidade": 0.01,
+   "diametro": 0.005
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "fluido",
+   "motor": "universal.sim_fluido",
+   "tipo_fonte": "calculo",
+   "dominio": "Fisica - Fluidos",
+   "requisitos": [
+    {
+     "chave": "densidade",
+     "unidade": "kg/m3",
+     "obrigatorio": true,
+     "descricao": "massa especifica do fluido"
+    },
+    {
+     "chave": "velocidade",
+     "unidade": "m/s",
+     "obrigatorio": true,
+     "descricao": "velocidade do escoamento"
+    },
+    {
+     "chave": "diametro",
+     "unidade": "m",
+     "obrigatorio": true,
+     "descricao": "diametro da coluna"
+    }
+   ],
+   "le_chaves": [
+    "densidade",
+    "diametro",
+    "velocidade",
+    "viscosidade"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "viscosidade"
+  ],
+  "motivo": "o motor usa padrao interno para: viscosidade",
+  "descritores": [
+   {
+    "codigo": "C7",
+    "modo": "apoio",
+    "chave": "Reynolds",
+    "unidade": "adimensional",
+    "fonte": "universal.sim_fluido (saida Reynolds)",
+    "memoria": "regime hidraulico (laminar/turbulento) do leito",
+    "valor": null,
+    "valor_apoio": 49.85
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "Fluidos",
+   "dominio": "Fisica - Fluidos",
+   "Reynolds": 49.85,
+   "regime": "laminar",
+   "validacao": "Re=50"
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.001,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "densidade": 997.0,
+   "velocidade": 0.01,
+   "diametro": 0.005
+  }
+ },
+ {
+  "simulador": "fractal_agregacao",
+  "parametros": {
+   "diametros_um": [
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "fractal_agregacao",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Materiais - agregacao",
+   "requisitos": [
+    {
+     "chave": "diametros_um",
+     "unidade": "um",
+     "obrigatorio": true,
+     "descricao": "diametros da distribuicao"
+    },
+    {
+     "chave": "massas_acumuladas_pct",
+     "unidade": "%",
+     "obrigatorio": false,
+     "descricao": "massa acumulada opcional"
+    }
+   ],
+   "le_chaves": [
+    "diametros_um",
+    "massas_acumuladas_pct"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "massas_acumuladas_pct"
+  ],
+  "motivo": "o motor usa padrao interno para: massas_acumuladas_pct",
+  "descritores": [
+   {
+    "codigo": "S7",
+    "modo": "apoio",
+    "chave": "dimensao_fractal",
+    "unidade": "adimensional",
+    "fonte": "None (saida dimensao_fractal)",
+    "memoria": "Df de agregacao como suporte a morfologia",
+    "valor": null,
+    "valor_apoio": 2.485
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "fractal_agregacao",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "dimensao_fractal por inclinacao log-log",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "ajuste_numerico",
+   "resultado": {
+    "dimensao_fractal": 2.485,
+    "faixa_esperada": [
+     1.0,
+     3.0
+    ],
+    "valido": true,
+    "inclinacao": 0.5152,
+    "r2": 0.9517,
+    "interpretacao": "agregados abertos/ramificados (Df < 2,5)"
+   },
+   "limitacoes": [
+    "estimativa de agregacao a partir de distribuicao de tamanho; confirmacao exige espalhamento de luz/SAXS ou imagem de agregado",
+    "valor valido apenas se o ajuste cobrir ao menos duas decadas de tamanho"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "dimensao_fractal": 2.485,
+   "agregacao_valida": true
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.003,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "diametros_um": [
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+   ]
+  }
+ },
+ {
+  "simulador": "ftir_grupos",
+  "parametros": {
+   "bandas_cm1": [
+    3430.0,
+    1600.0,
+    1100.0
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "ftir_grupos",
+   "motor": null,
+   "tipo_fonte": "parametro",
+   "dominio": "Espectroscopia - FTIR",
+   "requisitos": [
+    {
+     "chave": "bandas_cm1",
+     "unidade": "cm-1",
+     "obrigatorio": true,
+     "descricao": "bandas observadas no espectro"
+    },
+    {
+     "chave": "tolerancia_cm1",
+     "unidade": "cm-1",
+     "obrigatorio": false,
+     "descricao": "tolerancia de casamento (15)"
+    }
+   ],
+   "le_chaves": [
+    "bandas_cm1",
+    "tolerancia_cm1"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "tolerancia_cm1"
+  ],
+  "motivo": "o motor usa padrao interno para: tolerancia_cm1",
+  "descritores": [],
+  "avisos": [
+   "saida 'grupos' ausente no resultado de ftir_grupos"
+  ],
+  "resultado": {
+   "simulador": "ftir_grupos",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "atribuicao_FTIR por faixas de literatura",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "tabela_curada",
+   "resultado": {
+    "grupos": [
+     "O-H (ligacao de hidrogenio) / N-H alongamento",
+     "C=C aromatico",
+     "C-O-C / Si-O-Si / S=O (banda larga)"
+    ],
+    "total_grupos": 3,
+    "bandas_atribuidas": [
+     {
+      "banda_cm1": 3430.0,
+      "grupo": "O-H (ligacao de hidrogenio) / N-H alongamento",
+      "faixa_cm1": [
+       3200,
+       3600
+      ],
+      "confianca": "alta",
+      "fonte": "Silverstein, Spectrometric Identification 8a ed.",
+      "alternativas": []
+     },
+     {
+      "banda_cm1": 1600.0,
+      "grupo": "C=C aromatico",
+      "faixa_cm1": [
+       1575,
+       1610
+      ],
+      "confianca": "alta",
+      "fonte": "Silverstein 8a ed.",
+      "alternativas": []
+     },
+     {
+      "banda_cm1": 1100.0,
+      "grupo": "C-O-C / Si-O-Si / S=O (banda larga)",
+      "faixa_cm1": [
+       1000,
+       1170
+      ],
+      "confianca": "alta",
+      "fonte": "Silverstein 8a ed.; Socrates, Infrared and Raman Characteristic Frequencies 3a ed.",
+      "alternativas": []
+     }
+    ],
+    "bandas_nao_atribuidas": [],
+    "identificado": true
+   },
+   "limitacoes": [
+    "atribuicao e' qualitativa: FTIR nao quantifica grupos sem curva de calibracao",
+    "bandas largas (1000-1170 cm-1) podem sobrepor C-O-C, Si-O-Si e S=O; confirme com espectro de referencia",
+    "para quantificacao use titulacao de Boehm ou XPS"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "grupos_funcionais": [
+    "O-H (ligacao de hidrogenio) / N-H alongamento",
+    "C=C aromatico",
+    "C-O-C / Si-O-Si / S=O (banda larga)"
+   ]
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.002,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "bandas_cm1": [
+    3430.0,
+    1600.0,
+    1100.0
+   ]
+  }
+ },
+ {
+  "simulador": "granulometria_psd",
+  "parametros": {
+   "diametros_um": [
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0,
+    50.0
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "granulometria_psd",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Materiais - granulometria",
+   "requisitos": [
+    {
+     "chave": "diametros_um",
+     "unidade": "um",
+     "obrigatorio": true,
+     "descricao": "diametros individuais medidos"
+    },
+    {
+     "chave": "metodo",
+     "unidade": "texto",
+     "obrigatorio": false,
+     "descricao": "tecnica (analise_de_imagem, laser)"
+    }
+   ],
+   "le_chaves": [
+    "diametros_um",
+    "metodo"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "metodo"
+  ],
+  "motivo": "o motor usa padrao interno para: metodo",
+  "descritores": [
+   {
+    "codigo": "S7",
+    "modo": "valor",
+    "chave": "d50_um",
+    "unidade": "um",
+    "fonte": "None (saida d50_um)",
+    "memoria": "D50 por interpolacao da distribuicao acumulada",
+    "valor": 7.5,
+    "estado": "calculado"
+   },
+   {
+    "codigo": "S7",
+    "modo": "apoio",
+    "chave": "span",
+    "unidade": "adimensional",
+    "fonte": "None (saida span)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": 4.467
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "granulometria_psd",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "estatistica granulometrica (analise_de_imagem)",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "analitico",
+   "resultado": {
+    "media_um": 14.667,
+    "desvio_um": 18.651,
+    "d10_um": 1.5,
+    "d50_um": 7.5,
+    "d90_um": 35.0,
+    "span": 4.467,
+    "coeficiente_variacao_pct": 127.17,
+    "coeficiente_uniformidade": 6.667,
+    "amplitude_um": 49.0
+   },
+   "limitacoes": [
+    "estatistica descreve a amostra medida: o numero de particulas conta para a incerteza (n=6)",
+    "tamanho por imagem e' diametro projetado; converter para diametro equivalente de esfera exige premissa de forma"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "d50_um": 7.5,
+   "d10_um": 1.5,
+   "d90_um": 35.0,
+   "span": 4.467
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.002,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "diametros_um": [
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0,
+    50.0
+   ]
+  }
+ },
+ {
+  "simulador": "hidro",
+  "parametros": {
+   "area_km2": 100.0,
+   "precipitacao_mm": 1200.0
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "hidro",
+   "motor": "universal.sim_hidro",
+   "tipo_fonte": "motor_real",
+   "dominio": "Terra - Hidro",
+   "requisitos": [
+    {
+     "chave": "area_km2",
+     "unidade": "km2",
+     "obrigatorio": true,
+     "descricao": "area da bacia hidrografica"
+    },
+    {
+     "chave": "precipitacao_mm",
+     "unidade": "mm/ano",
+     "obrigatorio": true,
+     "descricao": "precipitacao media anual"
+    }
+   ],
+   "le_chaves": [
+    "area_km2",
+    "precipitacao_mm"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [],
+  "avisos": [
+   "saida 'vazao_m3s' ausente no resultado de hidro"
+  ],
+  "resultado": {
+   "simulador": "Hidrologia",
+   "dominio": "Terra - Hidro",
+   "volume_m3": 120000000.0,
+   "validacao": "V=1.20e+08 m3/ano",
+   "motor_situacao": "motor_falhou: ModuleNotFoundError: No module named 'wntr'",
+   "motor_prazo_s": 25.0
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.032,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok",
+  "parametros_usados": {
+   "area_km2": 100.0,
+   "precipitacao_mm": 1200.0
+  }
+ },
+ {
+  "simulador": "lixiviacao_cinetica",
+  "parametros": {
+   "tempo_s": [
+    3600,
+    7200,
+    14400,
+    28800,
+    86400
+   ],
+   "fracao_lixiviada": [
+    0.05,
+    0.09,
+    0.15,
+    0.21,
+    0.3
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "lixiviacao_cinetica",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Destino ambiental - lixiviacao",
+   "requisitos": [
+    {
+     "chave": "tempo_s",
+     "unidade": "s",
+     "obrigatorio": true,
+     "descricao": "tempos de amostragem"
+    },
+    {
+     "chave": "fracao_lixiviada",
+     "unidade": "fracao 0-1",
+     "obrigatorio": false,
+     "descricao": "X medido (ou informe concentracao, volume, massa e teor)"
+    },
+    {
+     "chave": "concentracao_mg_L",
+     "unidade": "mg/L",
+     "obrigatorio": false,
+     "descricao": "concentracao no likiviado (alternativa a X)"
+    },
+    {
+     "chave": "volume_L",
+     "unidade": "L",
+     "obrigatorio": false,
+     "descricao": "volume do ensaio"
+    },
+    {
+     "chave": "massa_amostra_g",
+     "unidade": "g",
+     "obrigatorio": false,
+     "descricao": "massa de solido"
+    },
+    {
+     "chave": "teor_inicial_mg_kg",
+     "unidade": "mg/kg",
+     "obrigatorio": false,
+     "descricao": "teor inicial do constituinte"
+    }
+   ],
+   "le_chaves": [
+    "tempo_s",
+    "fracao_lixiviada",
+    "concentracao_mg_L",
+    "volume_L",
+    "massa_amostra_g",
+    "teor_inicial_mg_kg"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "concentracao_mg_L",
+   "volume_L",
+   "massa_amostra_g",
+   "teor_inicial_mg_kg"
+  ],
+  "motivo": "o motor usa padrao interno para: concentracao_mg_L, volume_L, massa_amostra_g, teor_inicial_mg_kg",
+  "descritores": [
+   {
+    "codigo": "P7",
+    "modo": "valor",
+    "chave": "lixiviacao_pct",
+    "unidade": "%",
+    "fonte": "None (saida lixiviacao_pct)",
+    "memoria": "fracao lixiviada final ajustada por nucleo encolhendo",
+    "valor": 30.0,
+    "estado": "calculado"
+   },
+   {
+    "codigo": "P7",
+    "modo": "apoio",
+    "chave": "modelo_lixiviacao",
+    "unidade": "texto",
+    "fonte": "None (saida modelo_lixiviacao)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": "difusao_camada_produto"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "lixiviacao_cinetica",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "nucleo encolhendo (Levenspiel 3a ed.)",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "ajuste_numerico",
+   "resultado": {
+    "modelo_escolhido": "difusao_camada_produto",
+    "k_por_s": 4.227e-07,
+    "r2_melhor": 0.9689,
+    "r2_por_modelo": {
+     "difusao_camada_produto": 0.9689,
+     "controle_quimico_superficie": 0.496,
+     "primeira_ordem_aparente": 0.5505
+    },
+    "k_por_modelo": {
+     "difusao_camada_produto": 4.227e-07,
+     "controle_quimico_superficie": 1.5064e-06,
+     "primeira_ordem_aparente": 4.7638e-06
+    },
+    "tempo_para_90pct_s": 1309840.5,
+    "fracao_final": 0.3,
+    "confianca": "media",
+    "lixiviacao_pct": 30.0
+   },
+   "limitacoes": [
+    "o modelo de melhor R2 nao prova o mecanismo: exige variacao de agitacao, pH e granulometria para isolar o controle",
+    "ensaio de bancada (ABNT NBR 10005 para extrato solubilizado) usa condicoes fixas: registre-as no dado"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "lixiviacao_pct": 30.0,
+   "modelo_lixiviacao": "difusao_camada_produto",
+   "k_lixiviacao_por_s": 4.227e-07,
+   "r2_lixiviacao": 0.9689
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.001,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "tempo_s": [
+    3600,
+    7200,
+    14400,
+    28800,
+    86400
+   ],
+   "fracao_lixiviada": [
+    0.05,
+    0.09,
+    0.15,
+    0.21,
+    0.3
+   ]
+  }
+ },
+ {
+  "simulador": "nano",
+  "parametros": {
+   "diametro_nm": 45.0
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "nano",
+   "motor": "universal.sim_nano",
+   "tipo_fonte": "calculo",
+   "dominio": "Materiais - Nano",
+   "requisitos": [
+    {
+     "chave": "diametro_nm",
+     "unidade": "nm",
+     "obrigatorio": true,
+     "descricao": "diametro medio de particula (esfera equivalente)"
+    }
+   ],
+   "le_chaves": [
+    "diametro_nm"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "S5",
+    "modo": "valor",
+    "chave": "diametro_nm",
+    "unidade": "nm",
+    "fonte": "universal.sim_nano (saida diametro_nm)",
+    "memoria": "diametro informado pelo operador; o motor devolve 6/d (1/nm) e nao ecoa o diametro",
+    "valor": 45.0,
+    "estado": "presente"
+   },
+   {
+    "codigo": "S3",
+    "modo": "apoio",
+    "chave": "area_relativa",
+    "unidade": "1/nm",
+    "fonte": "universal.sim_nano (saida area_relativa)",
+    "memoria": "area relativa 6/d de esfera ideal; nao substitui BET em m2/g",
+    "valor": null,
+    "valor_apoio": 0.13333333333333333
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "Nanomateriais",
+   "dominio": "Materiais - Nano",
+   "area_relativa": 0.13333333333333333,
+   "validacao": "Area=0.13"
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.004,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok",
+  "parametros_usados": {
+   "diametro_nm": 45.0
+  }
+ },
+ {
+  "simulador": "perigo_composicao",
+  "parametros": {
+   "composicao": [
+    {
+     "substancia": "carbono",
+     "fracao": 0.8
+    },
+    {
+     "substancia": "zinco",
+     "fracao": 0.02
+    }
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "perigo_composicao",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Contexto - toxicidade e seguranca",
+   "requisitos": [
+    {
+     "chave": "composicao",
+     "unidade": "lista",
+     "obrigatorio": true,
+     "descricao": "itens com substancia/elemento e fracao ou percentual"
+    }
+   ],
+   "le_chaves": [
+    "composicao"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "C1",
+    "modo": "valor",
+    "chave": "indice_perigo",
+    "unidade": "0-4",
+    "fonte": "None (saida indice_perigo)",
+    "memoria": "indice ponderado da tabela GHS curada; nao e' ensaio de toxicidade",
+    "valor": 0.04,
+    "estado": "estimado"
+   },
+   {
+    "codigo": "C1",
+    "modo": "apoio",
+    "chave": "classificacao_perigo",
+    "unidade": "texto",
+    "fonte": "None (saida classificacao_perigo)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": "baixo"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "perigo_composicao",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "indicador de perigo GHS ponderado pela composicao",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "indice_ponderado",
+   "resultado": {
+    "indice_perigo": 0.04,
+    "escala": [
+     0,
+     4
+    ],
+    "classificacao": "baixo",
+    "cobertura_avaliada_pct": 2.4,
+    "constituintes_avaliados": [
+     {
+      "substancia": "zinco",
+      "fracao": 0.02,
+      "peso": 2,
+      "frases_h": [
+       "H302",
+       "H315",
+       "H319",
+       "H400",
+       "H410"
+      ],
+      "fonte": "GHS/CLP anexo VI",
+      "contribuicao": 0.04
+     }
+    ],
+    "nao_avaliados": [
+     {
+      "substancia": "carbono",
+      "fracao": 0.8,
+      "motivo": "sem entrada na tabela GHS curada; revisar manualmente"
+     }
+    ],
+    "frases_h_relevantes": [
+     "H302",
+     "H315",
+     "H319",
+     "H400",
+     "H410"
+    ],
+    "exige_avaliacao_toxicologica": true
+   },
+   "limitacoes": [
+    "e' indicador ponderado por categoria GHS, nao medicao de toxicidade (CL50/CE50 exigem ensaio)",
+    "perigo do material saturado com contaminante (ex.: Pb adsorvido) precisa ser somado ao perigo do proprio adsorvente",
+    "cobertura abaixo de 100%% significa que parte da massa nao foi classificada"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "indice_perigo": 0.04,
+   "classificacao_perigo": "baixo",
+   "frases_h": [
+    "H302",
+    "H315",
+    "H319",
+    "H400",
+    "H410"
+   ]
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.002,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok",
+  "parametros_usados": {
+   "composicao": [
+    {
+     "substancia": "carbono",
+     "fracao": 0.8
+    },
+    {
+     "substancia": "zinco",
+     "fracao": 0.02
+    }
+   ]
+  }
+ },
+ {
+  "simulador": "poluicao",
+  "parametros": {
+   "C0": 20.0,
+   "k": 0.05,
+   "t": 120.0
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "poluicao",
+   "motor": "universal.sim_poluicao",
+   "tipo_fonte": "calculo",
+   "dominio": "Ambiente - Poluicao",
+   "requisitos": [
+    {
+     "chave": "C0",
+     "unidade": "mg/L",
+     "obrigatorio": true,
+     "descricao": "concentracao inicial do contaminante"
+    },
+    {
+     "chave": "k",
+     "unidade": "1/tempo",
+     "obrigatorio": true,
+     "descricao": "constante de decaimento de primeira ordem"
+    },
+    {
+     "chave": "t",
+     "unidade": "tempo",
+     "obrigatorio": true,
+     "descricao": "tempo de contato"
+    }
+   ],
+   "le_chaves": [
+    "C0",
+    "k",
+    "t"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "D6",
+    "modo": "apoio",
+    "chave": "C_final",
+    "unidade": "mg/L",
+    "fonte": "universal.sim_poluicao (saida C_final)",
+    "memoria": "decaimento de primeira ordem C=C0*exp(-k*t); nao e' remocao por adsorcao",
+    "valor": null,
+    "valor_apoio": 0.04957504353332717
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "Poluicao",
+   "dominio": "Ambiente - Poluicao",
+   "C_final": 0.04957504353332717,
+   "validacao": "C=0.05"
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.003,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok",
+  "parametros_usados": {
+   "C0": 20.0,
+   "k": 0.05,
+   "t": 120.0
+  }
+ },
+ {
+  "simulador": "pzc_deriva_ph",
+  "parametros": {
+   "ph_inicial": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+   ],
+   "ph_final": [
+    3.1,
+    4.2,
+    5.3,
+    7.4,
+    9.9,
+    11.8
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "pzc_deriva_ph",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Quimica de superficie - PZC",
+   "requisitos": [
+    {
+     "chave": "ph_inicial",
+     "unidade": "pH",
+     "obrigatorio": true,
+     "descricao": "pH inicial (branco) de cada frasco"
+    },
+    {
+     "chave": "ph_final",
+     "unidade": "pH",
+     "obrigatorio": true,
+     "descricao": "pH apos equilibrio, na mesma ordem"
+    }
+   ],
+   "le_chaves": [
+    "ph_inicial",
+    "ph_final"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "P2",
+    "modo": "valor",
+    "chave": "pzc",
+    "unidade": "pH",
+    "fonte": "None (saida pzc)",
+    "memoria": "PZC por interpolacao da deriva de pH (dPH=0)",
+    "valor": 4.444,
+    "estado": "calculado"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "pzc_deriva_ph",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "deriva_de_ph (Fiol & Villaescusa 2006)",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "analitico",
+   "resultado": {
+    "pzc": 4.444,
+    "metodo_ajuste": "interpolacao entre dPH=0.200 (pH 4.00) e dPH=-0.700 (pH 6.00)",
+    "extrapolado": false,
+    "r2": 1.0,
+    "n_pontos": 6
+   },
+   "limitacoes": [
+    "mede o PZC do conjunto solido-solucao nas condicoes do ensaio: forca ionica, temperatura e eletrolito precisam acompanhar o dado",
+    "a interpolacao assume monotonia de dPH entre dois frascos vizinhos"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "pzc": 4.444,
+   "extrapolado": false
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.001,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok",
+  "parametros_usados": {
+   "ph_inicial": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+   ],
+   "ph_final": [
+    3.1,
+    4.2,
+    5.3,
+    7.4,
+    9.9,
+    11.8
+   ]
+  }
+ },
+ {
+  "simulador": "pzc_titulacao_massa",
+  "parametros": {
+   "massa_g_L": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    10
+   ],
+   "ph_equilibrio": [
+    4.6,
+    5.0,
+    5.6,
+    6.2,
+    6.9,
+    7.8
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "pzc_titulacao_massa",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Quimica de superficie - PZC",
+   "requisitos": [
+    {
+     "chave": "massa_g_L",
+     "unidade": "g/L",
+     "obrigatorio": true,
+     "descricao": "doses crescentes de solido"
+    },
+    {
+     "chave": "ph_equilibrio",
+     "unidade": "pH",
+     "obrigatorio": true,
+     "descricao": "pH final em cada dose"
+    }
+   ],
+   "le_chaves": [
+    "massa_g_L",
+    "ph_equilibrio"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "P2",
+    "modo": "valor",
+    "chave": "pzc",
+    "unidade": "pH",
+    "fonte": "None (saida pzc)",
+    "memoria": "pH do maior carregamento com checagem de patamar",
+    "valor": 7.8,
+    "estado": "calculado"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "pzc_titulacao_massa",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "titulacao_de_massa (Noh & Schwarz 1989)",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "ajuste_numerico",
+   "resultado": {
+    "pzc": 7.8,
+    "pzc_ultimo_ponto": 7.8,
+    "inclinacao_ph_por_decada": 2.9563,
+    "r2": 0.8887,
+    "plato_atingido": false,
+    "n_pontos": 6
+   },
+   "limitacoes": [
+    "o valor reportado e' o pH do maior carregamento: se o patamar nao foi atingido (|inclinacao| > 0,05 pH/decada) o PZC esta subestimado",
+    "necessita branco eletrolitico na mesma forca ionica"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "pzc": 7.8
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.001,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok",
+  "parametros_usados": {
+   "massa_g_L": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    10
+   ],
+   "ph_equilibrio": [
+    4.6,
+    5.0,
+    5.6,
+    6.2,
+    6.9,
+    7.8
+   ]
+  }
+ },
+ {
+  "simulador": "reciclabilidade",
+  "parametros": {
+   "composicao": [
+    {
+     "classe": "carbono ativado",
+     "fracao": 0.8
+    },
+    {
+     "classe": "lignina",
+     "fracao": 0.05
+    }
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "reciclabilidade",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Contexto - fim de vida",
+   "requisitos": [
+    {
+     "chave": "composicao",
+     "unidade": "lista",
+     "obrigatorio": true,
+     "descricao": "itens com classe/substancia e fracao ou percentual"
+    },
+    {
+     "chave": "ciclos_uteis",
+     "unidade": "ciclos",
+     "obrigatorio": false,
+     "descricao": "vida util medida (D5)"
+    },
+    {
+     "chave": "massa_reuso_kg",
+     "unidade": "kg",
+     "obrigatorio": false,
+     "descricao": "massa reaproveitada"
+    },
+    {
+     "chave": "massa_total_kg",
+     "unidade": "kg",
+     "obrigatorio": false,
+     "descricao": "massa total gerada"
+    }
+   ],
+   "le_chaves": [
+    "composicao",
+    "ciclos_uteis",
+    "massa_reuso_kg",
+    "massa_total_kg"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "ciclos_uteis",
+   "massa_reuso_kg",
+   "massa_total_kg"
+  ],
+  "motivo": "o motor usa padrao interno para: ciclos_uteis, massa_reuso_kg, massa_total_kg",
+  "descritores": [
+   {
+    "codigo": "C5",
+    "modo": "valor",
+    "chave": "indice_reciclabilidade",
+    "unidade": "0-1",
+    "fonte": "None (saida indice_reciclabilidade)",
+    "memoria": "media ponderada dos fatores por classe",
+    "valor": 0.0,
+    "estado": "calculado"
+   },
+   {
+    "codigo": "C5",
+    "modo": "apoio",
+    "chave": "massa_reaproveitada_pct",
+    "unidade": "%",
+    "fonte": "None (saida massa_reaproveitada_pct)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": null
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "reciclabilidade",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "indice ponderado de reciclabilidade por classe de material",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "indice_ponderado",
+   "resultado": {
+    "indice_reciclabilidade": 0.0,
+    "escala": [
+     0,
+     1
+    ],
+    "classificacao": "baixa",
+    "classes_avaliadas": [],
+    "classes_nao_avaliadas": [
+     {
+      "classe": "carbono ativado",
+      "fracao": 0.8
+     },
+     {
+      "classe": "lignina",
+      "fracao": 0.05
+     }
+    ],
+    "ciclos_uteis": null,
+    "destinos": [
+     {
+      "rota": "disposicao em aterro industrial",
+      "viavel": true,
+      "nota": "rota de menor valor agregado; avaliar estabilizacao previa"
+     }
+    ]
+   },
+   "limitacoes": [
+    "o indice usa fatores medios por classe: nao substitui ensaio de regeneracao nem analise de ciclo de vida",
+    "massa saturada com contaminante exige avaliacao de periculosidade (ABNT NBR 10004) antes da rota de reuso",
+    "rota escolhida precisa de licenciamento e receptora habilitada"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "indice_reciclabilidade": 0.0,
+   "massa_reaproveitada_pct": null
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.002,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "composicao": [
+    {
+     "classe": "carbono ativado",
+     "fracao": 0.8
+    },
+    {
+     "classe": "lignina",
+     "fracao": 0.05
+    }
+   ]
+  }
+ },
+ {
+  "simulador": "regeneracao_reuso",
+  "parametros": {
+   "capacidades_mg_g": [
+    100,
+    95,
+    91,
+    87,
+    84,
+    80
+   ],
+   "desorcao_pct": 92.0
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "regeneracao_reuso",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Desempenho - regeneracao",
+   "requisitos": [
+    {
+     "chave": "capacidades_mg_g",
+     "unidade": "mg/g",
+     "obrigatorio": true,
+     "descricao": "capacidade medida em cada ciclo"
+    },
+    {
+     "chave": "desorcao_pct",
+     "unidade": "%",
+     "obrigatorio": false,
+     "descricao": "eficiencia de dessorcao por ciclo"
+    }
+   ],
+   "le_chaves": [
+    "capacidades_mg_g",
+    "desorcao_pct"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "D5",
+    "modo": "apoio",
+    "chave": "eficiencia_regeneracao_pct",
+    "unidade": "%",
+    "fonte": "None (saida eficiencia_regeneracao_pct)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": 80.0
+   }
+  ],
+  "avisos": [
+   "saida 'ciclos_ate_80pct_capacidade' ausente no resultado de regeneracao_reuso"
+  ],
+  "resultado": {
+   "simulador": "regeneracao_reuso",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "ensaios em ciclos + ajuste exponencial de capacidade",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "ajuste_numerico",
+   "resultado": {
+    "ciclos_avaliados": 6,
+    "capacidade_ciclo1_mg_g": 100.0,
+    "capacidade_ultimo_ciclo_mg_g": 80.0,
+    "eficiencia_por_ciclo": [
+     1.0,
+     0.95,
+     0.91,
+     0.87,
+     0.84,
+     0.8
+    ],
+    "eficiencia_regeneracao_pct": 80.0,
+    "perda_capacidade_pct": 20.0,
+    "lambda_por_ciclo": 0.95723,
+    "r2_ajuste_exponencial": 0.9978,
+    "ciclos_ate_80pct_capacidade": 7,
+    "media_perda_por_ciclo_pct": 4.0,
+    "dessorcao_media_pct": 92.0
+   },
+   "limitacoes": [
+    "reuso depende do agente dessorvente e do tempo de contato: registre os dois em cada ciclo",
+    "extrapolacao acima dos ciclos medidos e' indicativa; capacidade fora da faixa medida nao e' garantida",
+    "comparar somente ensaios com a mesma massa, concentracao e pH"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "ciclos_uteis": 7,
+   "eficiencia_regeneracao_pct": 80.0,
+   "perda_capacidade_pct": 20.0
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.001,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok",
+  "parametros_usados": {
+   "capacidades_mg_g": [
+    100,
+    95,
+    91,
+    87,
+    84,
+    80
+   ],
+   "desorcao_pct": 92.0
+  }
+ },
+ {
+  "simulador": "seletividade_competitiva",
+  "parametros": {
+   "componentes": [
+    {
+     "nome": "sulfametoxazol",
+     "qmax_mg_g": 100.47,
+     "K_L_L_mg": 0.1497
+    },
+    {
+     "nome": "ibuprofeno",
+     "qmax_mg_g": 120.0,
+     "K_L_L_mg": 0.045
+    }
+   ],
+   "concentracoes_mg_L": [
+    20.0,
+    20.0
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "seletividade_competitiva",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Desempenho - seletividade",
+   "requisitos": [
+    {
+     "chave": "componentes",
+     "unidade": "lista",
+     "obrigatorio": true,
+     "descricao": "cada item com nome, qmax_mg_g e K_L_L_mg"
+    },
+    {
+     "chave": "concentracoes_mg_L",
+     "unidade": "mg/L",
+     "obrigatorio": true,
+     "descricao": "concentracao de equilibrio de cada componente (lista ou dict)"
+    }
+   ],
+   "le_chaves": [
+    "componentes",
+    "concentracoes_mg_L"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "D4",
+    "modo": "valor",
+    "chave": "seletividade_alfa",
+    "unidade": "adimensional",
+    "fonte": "None (saida seletividade_alfa)",
+    "memoria": "coeficiente de seletividade do primeiro par avaliado (Langmuir competitivo)",
+    "valor": 2.7853,
+    "estado": "calculado"
+   },
+   {
+    "codigo": "D4",
+    "modo": "apoio",
+    "chave": "componente_preferido",
+    "unidade": "texto",
+    "fonte": "None (saida componente_preferido)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": "sulfametoxazol"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "seletividade_competitiva",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "Langmuir competitivo estendido",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "analitico",
+   "resultado": {
+    "q_mg_g_por_componente": [
+     {
+      "componente": "sulfametoxazol",
+      "C_mg_L": 20.0,
+      "q_mg_g": 61.4645,
+      "coeficiente_particionamento_L_g": 3.0732,
+      "sitios_ocupados_pct": 61.18
+     },
+     {
+      "componente": "ibuprofeno",
+      "C_mg_L": 20.0,
+      "q_mg_g": 22.0678,
+      "coeficiente_particionamento_L_g": 1.1034,
+      "sitios_ocupados_pct": 18.39
+     }
+    ],
+    "seletividade": [
+     {
+      "par": "sulfametoxazol/ibuprofeno",
+      "alfa": 2.7853,
+      "preferido": "sulfametoxazol"
+     }
+    ],
+    "capacidade_total_mg_g": 83.5323,
+    "sitios_ocupados_total_pct": 79.57,
+    "seletividade_alfa": 2.7853,
+    "componente_preferido": "sulfametoxazol"
+   },
+   "limitacoes": [
+    "modelo de competicao com sitios identicos: nao representa heterogeneidade nem IAST (solucao adsorvida ideal)",
+    "qmax_i e K_i precisam vir de isotermas monocomponente do mesmo material e condicao (pH, temperatura, forca ionica)"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "seletividade_alfa": 2.7853,
+   "par_avaliado": "sulfametoxazol/ibuprofeno",
+   "componente_preferido": "sulfametoxazol",
+   "capacidade_total_mg_g": 83.5323
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.002,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok",
+  "parametros_usados": {
+   "componentes": [
+    {
+     "nome": "sulfametoxazol",
+     "qmax_mg_g": 100.47,
+     "K_L_L_mg": 0.1497
+    },
+    {
+     "nome": "ibuprofeno",
+     "qmax_mg_g": 120.0,
+     "K_L_L_mg": 0.045
+    }
+   ],
+   "concentracoes_mg_L": [
+    20.0,
+    20.0
+   ]
+  }
+ },
+ {
+  "simulador": "solubilidade_imersao",
+  "parametros": {
+   "massa_inicial_g": 1.0,
+   "massa_final_g": 0.97
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "solubilidade_imersao",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Destino ambiental - solubilidade",
+   "requisitos": [
+    {
+     "chave": "massa_inicial_g",
+     "unidade": "g",
+     "obrigatorio": true,
+     "descricao": "massa seca antes da imersao"
+    },
+    {
+     "chave": "massa_final_g",
+     "unidade": "g",
+     "obrigatorio": true,
+     "descricao": "massa seca depois da imersao"
+    }
+   ],
+   "le_chaves": [
+    "massa_inicial_g",
+    "massa_final_g"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "P7",
+    "modo": "valor",
+    "chave": "solubilidade_pct",
+    "unidade": "%",
+    "fonte": "None (saida solubilidade_pct)",
+    "memoria": "perda de massa por imersao em agua",
+    "valor": 3.0,
+    "estado": "calculado"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "solubilidade_imersao",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "perda de massa por imersao",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "analitico",
+   "resultado": {
+    "solubilidade_pct": 3.0,
+    "massa_dissolvida_g": 0.03
+   },
+   "limitacoes": [
+    "perda de massa nao distingue dissolucao de desagregacao/arraste de finos; filtrar 0,45 um antes de secar",
+    "nao substitui ensaio de solubilizacao normativo"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "solubilidade_pct": 3.0
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.001,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok",
+  "parametros_usados": {
+   "massa_inicial_g": 1.0,
+   "massa_final_g": 0.97
+  }
+ },
+ {
+  "simulador": "superficie",
+  "parametros": {
+   "area_m2g": 1262.0
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "superficie",
+   "motor": "universal.sim_superficie",
+   "tipo_fonte": "parametro",
+   "dominio": "Quimica - Superficie",
+   "requisitos": [
+    {
+     "chave": "area_m2g",
+     "unidade": "m2/g",
+     "obrigatorio": true,
+     "descricao": "area superficial BET medida do adsorvente"
+    }
+   ],
+   "le_chaves": [
+    "area_m2g"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [],
+  "motivo": null,
+  "descritores": [
+   {
+    "codigo": "S3",
+    "modo": "valor",
+    "chave": "area_m2g",
+    "unidade": "m2/g",
+    "fonte": "universal.sim_superficie (saida area_m2g)",
+    "memoria": "area devolvida pelo simulador a partir do parametro informado; nao e' calculo BET",
+    "valor": 1262.0,
+    "estado": "presente"
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "Superficie",
+   "dominio": "Quimica - Superficie",
+   "area_m2g": 1262.0,
+   "validacao": "Area superficial"
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.001,
+  "estado_motor": "ok",
+  "motor": "universal.py",
+  "estado": "ok",
+  "parametros_usados": {
+   "area_m2g": 1262.0
+  }
+ },
+ {
+  "simulador": "tga_tangente",
+  "parametros": {
+   "temperatura_C": [
+    30,
+    100,
+    200,
+    400,
+    600,
+    700,
+    800
+   ],
+   "massa_pct": [
+    96.0,
+    92.0,
+    88.0,
+    80.0,
+    62.0,
+    45.0,
+    30.0
+   ]
+  },
+  "requisitos": {
+   "tipo": "simulador",
+   "simulador": "tga_tangente",
+   "motor": null,
+   "tipo_fonte": "calculo",
+   "dominio": "Analise termica - TGA",
+   "requisitos": [
+    {
+     "chave": "temperatura_C",
+     "unidade": "C",
+     "obrigatorio": true,
+     "descricao": "temperaturas da curva (crescente)"
+    },
+    {
+     "chave": "massa_pct",
+     "unidade": "%",
+     "obrigatorio": true,
+     "descricao": "massa relativa em cada temperatura"
+    },
+    {
+     "chave": "taxa_aquecimento_C_min",
+     "unidade": "C/min",
+     "obrigatorio": false,
+     "descricao": "taxa do ensaio"
+    }
+   ],
+   "le_chaves": [
+    "temperatura_C",
+    "massa_pct",
+    "taxa_aquecimento_C_min"
+   ]
+  },
+  "faltando": [],
+  "parametros_padrao": [
+   "taxa_aquecimento_C_min"
+  ],
+  "motivo": "o motor usa padrao interno para: taxa_aquecimento_C_min",
+  "descritores": [
+   {
+    "codigo": "P5",
+    "modo": "valor",
+    "chave": "onset_C",
+    "unidade": "C",
+    "fonte": "None (saida onset_C)",
+    "memoria": "onset de decomposicao por tangente no pico de dTG",
+    "valor": 431.2,
+    "estado": "calculado"
+   },
+   {
+    "codigo": "P5",
+    "modo": "apoio",
+    "chave": "residuo_pct",
+    "unidade": "%",
+    "fonte": "None (saida residuo_pct)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": 30.0
+   },
+   {
+    "codigo": "P5",
+    "modo": "apoio",
+    "chave": "umidade_pct",
+    "unidade": "%",
+    "fonte": "None (saida umidade_pct)",
+    "memoria": null,
+    "valor": null,
+    "valor_apoio": 8.0
+   }
+  ],
+  "avisos": [],
+  "resultado": {
+   "simulador": "tga_tangente",
+   "motor": "ambiental.analises_experimentais",
+   "metodo": "TGA metodo da tangente (ASTM E1131 / ISO 11358)",
+   "versao_metodo": "1.0.0",
+   "nivel_validacao": "ajuste_numerico",
+   "resultado": {
+    "onset_C": 431.2,
+    "tmax_C": 700.0,
+    "taxa_max_pct_por_C": -0.16,
+    "umidade_pct": 8.0,
+    "residuo_pct": 30.0,
+    "perda_total_pct": 66.0,
+    "passos": [
+     {
+      "tmax_C": 700.0,
+      "taxa_pct_por_C": -0.16
+     }
+    ],
+    "temperatura_limite_uso_C": 431.0
+   },
+   "limitacoes": [
+    "onset por tangente depende da suavizacao da curva: taxas de aquecimento diferentes deslocam o valor",
+    "atmosfera (N2/ar), vazao e massa inicial devem acompanhar o dado",
+    "residuo nao identifica a fase: composicao exige XRD/XRF do residuo"
+   ],
+   "pergunta": "SMX em carvao KL-KOH",
+   "onset_C": 431.2,
+   "tmax_C": 700.0,
+   "residuo_pct": 30.0,
+   "umidade_pct": 8.0
+  },
+  "erro": null,
+  "executado": true,
+  "duracao_s": 0.003,
+  "estado_motor": "ok",
+  "motor": "ambiental.analises_experimentais",
+  "estado": "ok_com_aproximacao",
+  "parametros_usados": {
+   "temperatura_C": [
+    30,
+    100,
+    200,
+    400,
+    600,
+    700,
+    800
+   ],
+   "massa_pct": [
+    96.0,
+    92.0,
+    88.0,
+    80.0,
+    62.0,
+    45.0,
+    30.0
+   ]
+  }
+ }
+]

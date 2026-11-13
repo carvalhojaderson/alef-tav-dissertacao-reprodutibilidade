@@ -1,0 +1,14 @@
+# Dependencias ADICIONAIS do backend ambiental.
+# O nucleo cientifico (universal.py, bancos_rest.py, pesquisa_cientifica.py,
+# modelos_adsorcao_v2.py, nucleo_dados.py, exportadores.py) traz as suas proprias
+# dependencias pelo requirements.txt da raiz do projeto: nada e' reinstalado aqui.
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.5
+SQLAlchemy>=2.0
+requests>=2.31
+reportlab>=4.0
+
+# opcional (formato docx): python-docx>=1.1
+# o relatorio DOCX e' requisito da entrega: instalado por padrao
+python-docx>=1.1

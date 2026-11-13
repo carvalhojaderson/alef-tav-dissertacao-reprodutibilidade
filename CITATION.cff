@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Se usar este material, cite o repositório e a dissertação."
+title: "ALEF-TAV — material de reprodutibilidade da dissertação de mestrado"
+abstract: >-
+  Código-fonte, algoritmos, dados de entrada, resultados computacionais e
+  evidências de validação da versão da plataforma ALEF-TAV utilizada na
+  dissertação de mestrado em Engenharia Ambiental (matriz 7Dx4 de 28
+  descritores, motores ambientais e simuladores do núcleo científico).
+# Nome completo e ORCID devem ser confirmados pelo autor antes da citação formal.
+authors:
+  - name: "carvalhojaderson"
+    affiliation: "Dissertação de mestrado — Engenharia Ambiental"
+version: "dissertacao-2026-11-11"
+date-released: "2026-11-11"
+license: "Ver LICENCA.md"
+repository-code: "https://github.com/carvalhojaderson/alef-tav-dissertacao-reprodutibilidade"
+keywords:
+  - adsorção
+  - sulfametoxazol
+  - carvão ativado
+  - reprodutibilidade
+  - ALEF-TAV
+  - matriz 7Dx4

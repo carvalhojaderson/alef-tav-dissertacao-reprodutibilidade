@@ -1,0 +1,251 @@
+﻿
+==============================================================================
+0. ESTADO DO SERVICO - http://127.0.0.1:7860
+==============================================================================
+  estado=ok | servico=ALEF-TAV Ambiental API v1.0.0 | banco=sqlite
+  matriz=4 dimensoes x 28 descritores
+  motores do nucleo: {"universal": "ausente", "modelos_adsorcao_v2": "ausente", "modelos_analiticos_v2": "ausente", "pesquisa_cientifica": "ausente", "bancos_rest": "ausente", "bases_v5": "ausente", "nucleo_dados": "ausente", "exportadores": "ausente"}
+
+==============================================================================
+1. CRIAR PESQUISA - POST /api/research
+==============================================================================
+  pesquisa_id = pesq_531f88b620d18602
+  pergunta....: Adsorcao de sulfametoxazol (SMX) em carvoes ativados KL-KOH. Qual o melhor material?
+  contaminante: sulfametoxazol (SMX), classe ionica: anion organico
+  aplicacao...: agua | condicoes: {"temperatura_C": 25.0, "pH": 5.5}
+
+==============================================================================
+2. MATERIAL A - KL-KOH-1:1
+==============================================================================
+  POST /api/research/pesq_531f88b620d18602/materials -> material_id = mat_ca84ac210575584a
+  criado=False | propriedades gravadas=5
+  POST /api/research/pesq_531f88b620d18602/adsorbent -> 0.53 s
+
+  compatibilidade adsorvente x adsorbato (pH vs PZC)
+  --------------------------------------------------
+    veredito.............: indeterminado
+    classe do contaminante: nao_classificado
+    PZC..................: ausente
+    pH de operacao.......: 5.5
+    faltando.............: P2 (PZC), classe do contaminante
+    motivo...............: sem dado suficiente: P2 (PZC), classe do contaminante
+
+  simuladores (descritores alimentados)
+  -------------------------------------
+    - superficie      estado=indisponivel             executado=False
+        erro....: simulador nao registrado no motor universal
+    - nano            estado=indisponivel             executado=False
+        faltando: diametro_nm
+        erro....: simulador nao registrado no motor universal
+    - cristalografia  estado=indisponivel             executado=False
+        faltando: parametro_rede
+        erro....: simulador nao registrado no motor universal
+    - cfd             estado=indisponivel             executado=False
+        faltando: densidade, velocidade, diametro
+        erro....: simulador nao registrado no motor universal
+    - dft             estado=indisponivel             executado=False
+        faltando: material
+        erro....: simulador nao registrado no motor universal
+
+  descritores preenchidos na matriz
+  ---------------------------------
+    S3                                             = 1262 m2/g  [presente]
+        fonte: propriedade declarada no pedido
+
+  modelos de adsorcao solicitados
+  -------------------------------
+    - langmuir     estado=bloqueado_por_parametros
+        faltando: qmax, KL
+        parametros: Ce=10
+        natureza: calculo analitico do modelo; nao e' validacao experimental
+    - freundlich   estado=bloqueado_por_parametros
+        faltando: Kf, n
+        parametros: Ce=10
+        natureza: calculo analitico do modelo; nao e' validacao experimental
+
+  lacunas experimentais
+  ---------------------
+    - S1  composicao elementar e pureza              estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+    - P2  ponto de carga zero                        estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+    - D1  capacidade maxima de adsorcao              estado_atual=ausente
+        fecha com: pontos
+        fonte....: regra matriz_7d4._regra_d1
+    - D2  afinidade (KL/Kf) e fator de separacao     estado_atual=ausente
+        fecha com: pontos, C0
+        fonte....: regra matriz_7d4._regra_d2
+    - D3  cinetica de adsorcao                       estado_atual=ausente
+        fecha com: pontos_cinetica
+        fonte....: regra matriz_7d4._regra_d3
+    - D6  eficiencia de remocao                      estado_atual=ausente
+        fecha com: C0, Ce, volume_L, massa_g
+        fonte....: regra matriz_7d4._regra_d6
+    - D7  faixa operacional de pH/temperatura        estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+    - C1  toxicidade e seguranca                     estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+    - C6  conformidade normativa                     estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+
+  cobertura da matriz 7Dx4
+  ------------------------
+    com dado...: 1 de 28 descritores (3.57%)
+    presente  : 1
+    calculado : 0
+    estimado  : 0
+    ausente   : 27
+    nao_aplicavel: 0
+    validado  : 0
+    D1: 1/7 (14.29%)
+    D2: 0/7 (0.00%)
+    D3: 0/7 (0.00%)
+    D4: 0/7 (0.00%)
+
+  verificacoes automaticas
+  ------------------------
+    [OK     ] S3 = 1262 (area declarada 1262 m2/g)
+    [OK     ] langmuir bloqueado_por_parametros (faltando: qmax, KL)
+    [OK     ] freundlich bloqueado_por_parametros (faltando: Kf, n)
+    [OK     ] compatibilidade indeterminada com PZC ausente (faltando: P2 (PZC), classe do contaminante)
+    [ATENCAO] propriedade sem descritor oficial: volume_poros
+    [ATENCAO] qmax foi cadastrado como propriedade do material (POST /materials); o modelo le o descritor D1, que so' e' preenchido por 'caracterizacao'/'propriedades' no POST /adsorbent
+
+==============================================================================
+3. MATERIAL B - KL-KOH-2:1
+==============================================================================
+  POST /api/research/pesq_531f88b620d18602/materials -> material_id = mat_358eb4207c9fb795
+  criado=False | propriedades gravadas=5
+  POST /api/research/pesq_531f88b620d18602/adsorbent -> 0.75 s
+
+  compatibilidade adsorvente x adsorbato (pH vs PZC)
+  --------------------------------------------------
+    veredito.............: indeterminado
+    classe do contaminante: nao_classificado
+    PZC..................: ausente
+    pH de operacao.......: 5.5
+    faltando.............: P2 (PZC), classe do contaminante
+    motivo...............: sem dado suficiente: P2 (PZC), classe do contaminante
+
+  simuladores (descritores alimentados)
+  -------------------------------------
+    - superficie      estado=indisponivel             executado=False
+        erro....: simulador nao registrado no motor universal
+    - nano            estado=indisponivel             executado=False
+        faltando: diametro_nm
+        erro....: simulador nao registrado no motor universal
+    - cristalografia  estado=indisponivel             executado=False
+        faltando: parametro_rede
+        erro....: simulador nao registrado no motor universal
+    - cfd             estado=indisponivel             executado=False
+        faltando: densidade, velocidade, diametro
+        erro....: simulador nao registrado no motor universal
+    - dft             estado=indisponivel             executado=False
+        faltando: material
+        erro....: simulador nao registrado no motor universal
+
+  descritores preenchidos na matriz
+  ---------------------------------
+    S3                                             = 963 m2/g  [presente]
+        fonte: propriedade declarada no pedido
+
+  modelos de adsorcao solicitados
+  -------------------------------
+    - langmuir     estado=bloqueado_por_parametros
+        faltando: qmax, KL
+        parametros: Ce=10
+        natureza: calculo analitico do modelo; nao e' validacao experimental
+    - freundlich   estado=bloqueado_por_parametros
+        faltando: Kf, n
+        parametros: Ce=10
+        natureza: calculo analitico do modelo; nao e' validacao experimental
+
+  lacunas experimentais
+  ---------------------
+    - S1  composicao elementar e pureza              estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+    - P2  ponto de carga zero                        estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+    - D1  capacidade maxima de adsorcao              estado_atual=ausente
+        fecha com: pontos
+        fonte....: regra matriz_7d4._regra_d1
+    - D2  afinidade (KL/Kf) e fator de separacao     estado_atual=ausente
+        fecha com: pontos, C0
+        fonte....: regra matriz_7d4._regra_d2
+    - D3  cinetica de adsorcao                       estado_atual=ausente
+        fecha com: pontos_cinetica
+        fonte....: regra matriz_7d4._regra_d3
+    - D6  eficiencia de remocao                      estado_atual=ausente
+        fecha com: C0, Ce, volume_L, massa_g
+        fonte....: regra matriz_7d4._regra_d6
+    - D7  faixa operacional de pH/temperatura        estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+    - C1  toxicidade e seguranca                     estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+    - C6  conformidade normativa                     estado_atual=ausente
+        fecha com: nada
+        fonte....: ensaio/medicao experimental
+
+  cobertura da matriz 7Dx4
+  ------------------------
+    com dado...: 1 de 28 descritores (3.57%)
+    presente  : 1
+    calculado : 0
+    estimado  : 0
+    ausente   : 27
+    nao_aplicavel: 0
+    validado  : 0
+    D1: 1/7 (14.29%)
+    D2: 0/7 (0.00%)
+    D3: 0/7 (0.00%)
+    D4: 0/7 (0.00%)
+
+  verificacoes automaticas
+  ------------------------
+    [OK     ] S3 = 963 (area declarada 963 m2/g)
+    [OK     ] langmuir bloqueado_por_parametros (faltando: qmax, KL)
+    [OK     ] freundlich bloqueado_por_parametros (faltando: Kf, n)
+    [OK     ] compatibilidade indeterminada com PZC ausente (faltando: P2 (PZC), classe do contaminante)
+    [ATENCAO] propriedade sem descritor oficial: volume_poros
+    [ATENCAO] qmax foi cadastrado como propriedade do material (POST /materials); o modelo le o descritor D1, que so' e' preenchido por 'caracterizacao'/'propriedades' no POST /adsorbent
+
+==============================================================================
+RESUMO COMPARATIVO - cobertura da matriz 7Dx4
+==============================================================================
+  Material A (KL-KOH-1:1): 1 de 28 descritores com dado (3.57%)
+  Material B (KL-KOH-2:1): 1 de 28 descritores com dado (3.57%)
+
+  dim  A               B             
+  D1   1/7 (14%)       1/7 (14%)     
+  D2   0/7 (0%)        0/7 (0%)      
+  D3   0/7 (0%)        0/7 (0%)      
+  D4   0/7 (0%)        0/7 (0%)      
+
+  descritores com valor (A = KL-KOH-1:1 | B = KL-KOH-2:1):
+    S3  1262 m2/g          963 m2/g          
+
+  lacunas em comum.: C1, C6, D1, D2, D3, D6, D7, P2, S1
+  lacunas so' em A.: nada
+  lacunas so' em B.: nada
+
+  modelos: A=langmuir:bloqueado_por_parametros, freundlich:bloqueado_por_parametros | B=langmuir:bloqueado_por_parametros, freundlich:bloqueado_por_parametros
+  compatibilidade: A=indeterminado | B=indeterminado
+
+  VEREDITO DA COMPARACAO:
+    empate em cobertura (1 x 1 descritores com dado).
+    A escolha entre KL-KOH-1:1 e KL-KOH-2:1 depende de D1/D2 (capacidade e afinidade),
+    que exigem ensaio de isoterma (qmax com KL ajustado); sem isso, nenhum dos dois
+    pode ser declarado melhor com base em dado.
+
+  resultado completo gravado em _smx_resultado.json
+
+  pesquisa pesq_531f88b620d18602 mantida no banco (use --limpar para remover).

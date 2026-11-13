@@ -1,0 +1,325 @@
+{
+  "pesquisa_id": "pesq_84dbc8b31c8a40a5",
+  "materiais": [
+    {
+      "rotulo": "A",
+      "nome": "KL-KOH-1:1",
+      "material_id": "mat_ca84ac210575584a",
+      "descritores": {
+        "S3": {
+          "valor": 1262.0,
+          "estado": "presente",
+          "unidade": "m2/g",
+          "fonte": "Brazil et al., 2026"
+        },
+        "S4": {
+          "valor": 0.58,
+          "estado": "presente",
+          "unidade": "cm3/g",
+          "fonte": "Brazil et al., 2026"
+        },
+        "D1": {
+          "valor": 100.0,
+          "estado": "presente",
+          "unidade": "mg/g",
+          "fonte": "Brazil et al., 2026"
+        }
+      },
+      "simuladores": [
+        {
+          "nome": "superficie",
+          "estado": "ok",
+          "executado": true,
+          "faltando": [],
+          "descritores": [
+            "S3"
+          ]
+        },
+        {
+          "nome": "nano",
+          "estado": "bloqueado_por_parametros",
+          "executado": false,
+          "faltando": [
+            "diametro_nm"
+          ],
+          "descritores": []
+        },
+        {
+          "nome": "cristalografia",
+          "estado": "ok_com_aproximacao",
+          "executado": true,
+          "faltando": [],
+          "descritores": [
+            "S2"
+          ]
+        },
+        {
+          "nome": "cfd",
+          "estado": "ok",
+          "executado": true,
+          "faltando": [],
+          "descritores": [
+            "C7"
+          ]
+        },
+        {
+          "nome": "dft",
+          "estado": "ok",
+          "executado": true,
+          "faltando": [],
+          "descritores": [
+            "P6"
+          ]
+        }
+      ],
+      "modelos": [
+        {
+          "modelo": "langmuir",
+          "estado": "bloqueado_por_parametros",
+          "qe": null,
+          "faltando": [
+            "KL"
+          ]
+        },
+        {
+          "modelo": "freundlich",
+          "estado": "bloqueado_por_parametros",
+          "qe": null,
+          "faltando": [
+            "Kf",
+            "n"
+          ]
+        }
+      ],
+      "compatibilidade": {
+        "veredito": "indeterminado",
+        "classe_contaminante": "anion_organico",
+        "pzc": null,
+        "pH": 5.5,
+        "faltando": [
+          "P2 (PZC)"
+        ],
+        "regra": "pH < PZC: superficie protonada (carga positiva) favorece adsorcao de especies anionicas; pH > PZC: superficie desprotonada (carga negativa) favorece cations. |pH - PZC| e' a margem de carga efetiva.",
+        "motivos": [
+          "sem dado suficiente: P2 (PZC)"
+        ]
+      },
+      "lacunas": [
+        "S1",
+        "P2",
+        "D2",
+        "D3",
+        "D6",
+        "D7",
+        "C1",
+        "C6"
+      ],
+      "preenchimento": {
+        "total_avaliado": 28,
+        "com_dado": 4,
+        "sem_dado": 24,
+        "percentual_com_dado": 14.29,
+        "por_estado": {
+          "presente": 3,
+          "calculado": 0,
+          "estimado": 1,
+          "ausente": 24,
+          "nao_aplicavel": 0,
+          "validado": 0
+        },
+        "por_dimensao": {
+          "D1": {
+            "preenchidos": 2,
+            "total": 7,
+            "percentual": 28.57
+          },
+          "D2": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D3": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D4": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          }
+        }
+      }
+    },
+    {
+      "rotulo": "B",
+      "nome": "KL-KOH-2:1",
+      "material_id": "mat_358eb4207c9fb795",
+      "descritores": {
+        "S3": {
+          "valor": 963.0,
+          "estado": "presente",
+          "unidade": "m2/g",
+          "fonte": "Brazil et al., 2026"
+        },
+        "S4": {
+          "valor": 0.49,
+          "estado": "presente",
+          "unidade": "cm3/g",
+          "fonte": "Brazil et al., 2026"
+        },
+        "D1": {
+          "valor": 100.0,
+          "estado": "presente",
+          "unidade": "mg/g",
+          "fonte": "Brazil et al., 2026"
+        }
+      },
+      "simuladores": [
+        {
+          "nome": "superficie",
+          "estado": "ok",
+          "executado": true,
+          "faltando": [],
+          "descritores": [
+            "S3"
+          ]
+        },
+        {
+          "nome": "nano",
+          "estado": "bloqueado_por_parametros",
+          "executado": false,
+          "faltando": [
+            "diametro_nm"
+          ],
+          "descritores": []
+        },
+        {
+          "nome": "cristalografia",
+          "estado": "ok_com_aproximacao",
+          "executado": true,
+          "faltando": [],
+          "descritores": [
+            "S2"
+          ]
+        },
+        {
+          "nome": "cfd",
+          "estado": "ok",
+          "executado": true,
+          "faltando": [],
+          "descritores": [
+            "C7"
+          ]
+        },
+        {
+          "nome": "dft",
+          "estado": "ok",
+          "executado": true,
+          "faltando": [],
+          "descritores": [
+            "P6"
+          ]
+        }
+      ],
+      "modelos": [
+        {
+          "modelo": "langmuir",
+          "estado": "bloqueado_por_parametros",
+          "qe": null,
+          "faltando": [
+            "KL"
+          ]
+        },
+        {
+          "modelo": "freundlich",
+          "estado": "bloqueado_por_parametros",
+          "qe": null,
+          "faltando": [
+            "Kf",
+            "n"
+          ]
+        }
+      ],
+      "compatibilidade": {
+        "veredito": "indeterminado",
+        "classe_contaminante": "anion_organico",
+        "pzc": null,
+        "pH": 5.5,
+        "faltando": [
+          "P2 (PZC)"
+        ],
+        "regra": "pH < PZC: superficie protonada (carga positiva) favorece adsorcao de especies anionicas; pH > PZC: superficie desprotonada (carga negativa) favorece cations. |pH - PZC| e' a margem de carga efetiva.",
+        "motivos": [
+          "sem dado suficiente: P2 (PZC)"
+        ]
+      },
+      "lacunas": [
+        "S1",
+        "P2",
+        "D2",
+        "D3",
+        "D6",
+        "D7",
+        "C1",
+        "C6"
+      ],
+      "preenchimento": {
+        "total_avaliado": 28,
+        "com_dado": 4,
+        "sem_dado": 24,
+        "percentual_com_dado": 14.29,
+        "por_estado": {
+          "presente": 3,
+          "calculado": 0,
+          "estimado": 1,
+          "ausente": 24,
+          "nao_aplicavel": 0,
+          "validado": 0
+        },
+        "por_dimensao": {
+          "D1": {
+            "preenchidos": 2,
+            "total": 7,
+            "percentual": 28.57
+          },
+          "D2": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D3": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D4": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "comparacao": {
+    "cobertura_A": 4,
+    "cobertura_B": 4,
+    "empate": true,
+    "veredito": "empate — sem D1/D2 medido, nenhum dos dois pode ser declarado melhor"
+  },
+  "viabilidade": {
+    "pontuacao": 29.57,
+    "classificacao": "requer_dados",
+    "lacunas": [
+      "24 descritores sem dado na matriz",
+      "evidencias insuficientes (0; minimo 3)",
+      "risco e conformidade incompletos (P7, C1, C6)"
+    ]
+  },
+  "prova": {
+    "estado": "parcial",
+    "demonstravel": false
+  },
+  "relatorio_md": "C:\\Users\\PC\\Desktop\\Projetos\\Nova pasta\\dados_ambiental\\relatorios\\viabilidade_pesq_84dbc8b31c8a40a5_rel_1eb644f6afbf4f28.md"
+}

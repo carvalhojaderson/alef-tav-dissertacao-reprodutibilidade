@@ -1,0 +1,29 @@
+[QA] analises_experimentais: STUB LOCAL ativo (bytecode CPython 3.10 ausente nesta copia)
+pesquisa: pesq_84dbc8b31c8a40a5
+
+=== Material A - KL-KOH-1:1 ===
+[BRIDGE] FermiLink carregado.
+  S3=1262.0 m2/g
+  D1=100.0 mg/g  estado=presente
+  compatibilidade: indeterminado | classe=anion_organico | faltando=['P2 (PZC)']
+  modelos: [('langmuir', 'bloqueado_por_parametros'), ('freundlich', 'bloqueado_por_parametros')]
+  simuladores ok: ['superficie', 'cristalografia', 'cfd', 'dft']
+  cobertura: 4/28 (14.29%)
+  lacunas: ['S1', 'P2', 'D2', 'D3', 'D6', 'D7', 'C1', 'C6']
+
+=== Material B - KL-KOH-2:1 ===
+  S3=963.0 m2/g
+  D1=100.0 mg/g  estado=presente
+  compatibilidade: indeterminado | classe=anion_organico | faltando=['P2 (PZC)']
+  modelos: [('langmuir', 'bloqueado_por_parametros'), ('freundlich', 'bloqueado_por_parametros')]
+  simuladores ok: ['superficie', 'cristalografia', 'cfd', 'dft']
+  cobertura: 4/28 (14.29%)
+  lacunas: ['S1', 'P2', 'D2', 'D3', 'D6', 'D7', 'C1', 'C6']
+
+=== JSON: resultado_smx_local.json ===
+{
+  "cobertura_A": 4,
+  "cobertura_B": 4,
+  "empate": true,
+  "veredito": "empate — sem D1/D2 medido, nenhum dos dois pode ser declarado melhor"
+}

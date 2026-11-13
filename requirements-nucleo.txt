@@ -1,0 +1,56 @@
+gradio==5.50.0
+# ATENCAO: o ambiente validado nesta rodada tem gradio 6.29.1 instalado, mais
+# novo que o pino acima. app.py usa _criar_chatbot() justamente para funcionar
+# nas duas versoes (o parametro type= do Chatbot foi REMOVIDO no gradio 6).
+# Nao rebaixar o gradio sem reexecutar a suite: o downgrade arrasta starlette.
+huggingface_hub>=0.33.5
+fastapi
+uvicorn
+requests
+arxiv
+duckduckgo-search
+beautifulsoup4
+lxml
+numpy
+# 10/05/2026 11:24:45
+
+# 10/06/2026 13:17:05
+
+# 10/06/2026 13:29:22
+
+# --- Conferencia automatica de imports (2026-10-12) ---
+# Import no TOPO e sem protecao (o app nao sobe sem eles):
+sqlalchemy
+python-multipart
+# Import protegido, mas essencial para o recurso funcionar:
+python-dotenv
+httpx
+# Exportacao/upload de dados (imports internos de api_dados.py):
+pillow
+openpyxl
+pypdf
+reportlab
+matplotlib
+plotly
+python-docx
+python-pptx
+scipy
+# Runner da suite de testes (14 arquivos test_*.py no repositorio). Nao e usado
+# em runtime pelo app; declarado para que a validacao local seja reproduzivel
+# em um clone limpo. Os 3 ultimos (registro/executor/API de componentes) rodam
+# sem Docker e sem rede: o runner do executor e injetado nos testes.
+pytest
+# Fora de proposito (pesados/opcionais, imports protegidos ou preguicosos):
+# ase, pymatgen, rdkit, cobra, brian2, pybamm, mesa, wntr,
+# sentence-transformers, scikit-learn, whisper, streamlit
+# --- Corretivo do runtime do Space (Python 3.13) ---
+# O Python 3.13 removeu o modulo stdlib "audioop". O gradio importa
+# pydub, que exige "audioop": sem isto o runtime Python 3.13 morre em
+# ModuleNotFoundError: No module named 'audioop' (e depois pyaudioop).
+#
+# Marcador de ambiente OBRIGATORIO: o pacote audioop-lts declara
+#   Requires-Python: >=3.13  (conferido em https://pypi.org/pypi/audioop-lts/json)
+# Sem o marcador, em Python 3.10 (imagem Docker, FROM python:3.10-slim-bookworm)
+# o pip nao encontra versao compativel e ABORTA o build com
+# "ERROR: Could not find a version that satisfies the requirement audioop-lts".
+audioop-lts; python_version >= "3.13"

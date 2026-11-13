@@ -1,0 +1,262 @@
+{
+  "base_url": "http://127.0.0.1:7860",
+  "pesquisa_id": "pesq_531f88b620d18602",
+  "materiais": [
+    {
+      "rotulo": "A",
+      "nome": "KL-KOH-1:1",
+      "material_id": "mat_ca84ac210575584a",
+      "cadastro": {
+        "criado": false,
+        "propriedades": 5
+      },
+      "compatibilidade": {
+        "veredito": "indeterminado",
+        "classe_contaminante": "nao_classificado",
+        "pzc": null,
+        "pH": 5.5,
+        "faltando": [
+          "P2 (PZC)",
+          "classe do contaminante"
+        ],
+        "regra": "pH < PZC: superficie protonada (carga positiva) favorece adsorcao de especies anionicas; pH > PZC: superficie desprotonada (carga negativa) favorece cations. |pH - PZC| e' a margem de carga efetiva.",
+        "motivos": [
+          "sem dado suficiente: P2 (PZC), classe do contaminante"
+        ]
+      },
+      "simuladores": [
+        {
+          "simulador": "superficie",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [],
+          "erro": "simulador nao registrado no motor universal"
+        },
+        {
+          "simulador": "nano",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [
+            "diametro_nm"
+          ],
+          "erro": "simulador nao registrado no motor universal"
+        },
+        {
+          "simulador": "cristalografia",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [
+            "parametro_rede"
+          ],
+          "erro": "simulador nao registrado no motor universal"
+        },
+        {
+          "simulador": "cfd",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [
+            "densidade",
+            "velocidade",
+            "diametro"
+          ],
+          "erro": "simulador nao registrado no motor universal"
+        },
+        {
+          "simulador": "dft",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [
+            "material"
+          ],
+          "erro": "simulador nao registrado no motor universal"
+        }
+      ],
+      "descritores": {
+        "S3": {
+          "valor": 1262.0,
+          "unidade": "m2/g",
+          "estado": "presente"
+        }
+      },
+      "modelos": {
+        "langmuir": "bloqueado_por_parametros",
+        "freundlich": "bloqueado_por_parametros"
+      },
+      "lacunas": [
+        "S1",
+        "P2",
+        "D1",
+        "D2",
+        "D3",
+        "D6",
+        "D7",
+        "C1",
+        "C6"
+      ],
+      "cobertura": {
+        "total_avaliado": 28,
+        "com_dado": 1,
+        "sem_dado": 27,
+        "percentual_com_dado": 3.57,
+        "por_estado": {
+          "presente": 1,
+          "calculado": 0,
+          "estimado": 0,
+          "ausente": 27,
+          "nao_aplicavel": 0,
+          "validado": 0
+        },
+        "por_dimensao": {
+          "D1": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D2": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          },
+          "D3": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          },
+          "D4": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          }
+        }
+      }
+    },
+    {
+      "rotulo": "B",
+      "nome": "KL-KOH-2:1",
+      "material_id": "mat_358eb4207c9fb795",
+      "cadastro": {
+        "criado": false,
+        "propriedades": 5
+      },
+      "compatibilidade": {
+        "veredito": "indeterminado",
+        "classe_contaminante": "nao_classificado",
+        "pzc": null,
+        "pH": 5.5,
+        "faltando": [
+          "P2 (PZC)",
+          "classe do contaminante"
+        ],
+        "regra": "pH < PZC: superficie protonada (carga positiva) favorece adsorcao de especies anionicas; pH > PZC: superficie desprotonada (carga negativa) favorece cations. |pH - PZC| e' a margem de carga efetiva.",
+        "motivos": [
+          "sem dado suficiente: P2 (PZC), classe do contaminante"
+        ]
+      },
+      "simuladores": [
+        {
+          "simulador": "superficie",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [],
+          "erro": "simulador nao registrado no motor universal"
+        },
+        {
+          "simulador": "nano",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [
+            "diametro_nm"
+          ],
+          "erro": "simulador nao registrado no motor universal"
+        },
+        {
+          "simulador": "cristalografia",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [
+            "parametro_rede"
+          ],
+          "erro": "simulador nao registrado no motor universal"
+        },
+        {
+          "simulador": "cfd",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [
+            "densidade",
+            "velocidade",
+            "diametro"
+          ],
+          "erro": "simulador nao registrado no motor universal"
+        },
+        {
+          "simulador": "dft",
+          "estado": "indisponivel",
+          "executado": false,
+          "faltando": [
+            "material"
+          ],
+          "erro": "simulador nao registrado no motor universal"
+        }
+      ],
+      "descritores": {
+        "S3": {
+          "valor": 963.0,
+          "unidade": "m2/g",
+          "estado": "presente"
+        }
+      },
+      "modelos": {
+        "langmuir": "bloqueado_por_parametros",
+        "freundlich": "bloqueado_por_parametros"
+      },
+      "lacunas": [
+        "S1",
+        "P2",
+        "D1",
+        "D2",
+        "D3",
+        "D6",
+        "D7",
+        "C1",
+        "C6"
+      ],
+      "cobertura": {
+        "total_avaliado": 28,
+        "com_dado": 1,
+        "sem_dado": 27,
+        "percentual_com_dado": 3.57,
+        "por_estado": {
+          "presente": 1,
+          "calculado": 0,
+          "estimado": 0,
+          "ausente": 27,
+          "nao_aplicavel": 0,
+          "validado": 0
+        },
+        "por_dimensao": {
+          "D1": {
+            "preenchidos": 1,
+            "total": 7,
+            "percentual": 14.29
+          },
+          "D2": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          },
+          "D3": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          },
+          "D4": {
+            "preenchidos": 0,
+            "total": 7,
+            "percentual": 0.0
+          }
+        }
+      }
+    }
+  ]
+}
