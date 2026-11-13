@@ -111,3 +111,30 @@ acrescentaram — é a base do número de cobertura usado na dissertação.
 |---|---|---|
 | `dados_ambiental/ambiental.db` | 20 | 15 pesquisas, 3 materiais, 15 descritores, 90 simulações, 4 viabilidades, 76 propriedades |
 | `_qa_matriz/ambiental.db` | 20 | 59 descritores, 52 componentes, 90 simulações, 135 eventos de histórico |
+
+## 8. Verificação pós-publicação (clone do GitHub)
+
+Executada em 11/11/2026 sobre um `git clone` do repositório público, na tag
+`snapshot-2026-11-11`, em diretório temporário separado do snapshot:
+
+| Passo | Resultado |
+|---|---|
+| `git clone --branch snapshot-2026-11-11` | 104 arquivos versionados |
+| `verificar_integridade.ps1` | 103 conferem, 0 divergentes, 0 ausentes — **INTEGRIDADE OK** |
+| `python semelhanca_cosseno.py --json` | 0,9981 / 0,9826 / 0,9999 / 0,7913 / 0,7944; JSON regerado **byte-idêntico** ao publicado (mesmo SHA-256) |
+| `python comparar_candidatos.py` | 27 das 28 linhas da tabela idênticas; única diferença é P1 (publicado `ausente`, regerado `0,0` `calculado`) — a divergência de unidade da seção 4 |
+
+Conclusão: o conteúdo publicado no GitHub reproduz o snapshot e reexecuta os
+cálculos do estudo de caso sem ajuste manual. Os arquivos de resultado
+publicados continuam sendo os originais de 03–10/11/2026.
+
+### Comandos usados
+
+```powershell
+git clone --branch snapshot-2026-11-11 https://github.com/carvalhojaderson/alef-tav-dissertacao-reprodutibilidade.git
+cd alef-tav-dissertacao-reprodutibilidade
+powershell -ExecutionPolicy Bypass -File .\verificar_integridade.ps1
+python semelhanca_cosseno.py --json
+python comparar_candidatos.py
+```
+
