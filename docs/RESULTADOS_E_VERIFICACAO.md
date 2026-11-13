@@ -139,9 +139,8 @@ Executada em 11/11/2026 sobre um `git clone` do repositório público, na tag
 | `python comparar_candidatos.py` | 27 das 28 linhas da tabela idênticas; única diferença é P1 (publicado `ausente`, regerado `0,0` `calculado`) — a divergência de unidade da seção 4 |
 
 A verificação foi repetida em 13/11/2026, depois da atualização de documentação
-e citação (commit `e513063`, tag `snapshot-2026-11-11` = `70041fc`), com o mesmo
-resultado: 106 arquivos, 105 conferem, JSON regerado byte-idêntico e
-`git status` limpo após a execução.
+e da citação na dissertação, com o mesmo resultado: 106 arquivos, 105 conferem,
+JSON regerado byte-idêntico e `git status` limpo após a execução.
 
 Conclusão: o conteúdo publicado no GitHub reproduz o snapshot e reexecuta os
 cálculos do estudo de caso sem ajuste manual. Os arquivos de resultado
