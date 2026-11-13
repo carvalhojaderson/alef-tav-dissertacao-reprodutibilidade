@@ -23,6 +23,7 @@ arquivos são cópias fiéis do projeto, com SHA-256 registrado em
 | Estudo de caso SMX (`smx_local.py`) | estrutura e veredito idênticos; mesma divergência de P1 |
 | Suíte de testes | 133 casos; 96 aprovados / 37 recusados pelo *stub* do bytecode |
 | Varredura de segredos | nenhum arquivo com credencial publicado |
+| Citação na dissertação | §3.11.6 + referência ABNT `CARVALHO, 2026` — `docs/CITACAO_E_DISSERTACAO.md` |
 
 Detalhes, comandos e tabelas comparativas: `docs/RESULTADOS_E_VERIFICACAO.md`.
 
@@ -32,9 +33,11 @@ Detalhes, comandos e tabelas comparativas: `docs/RESULTADOS_E_VERIFICACAO.md`.
 .
 ├─ README.md                          este arquivo
 ├─ LICENCA.md                         condições de uso
-├─ CITATION.cff                       citação sugerida
+├─ CITATION.cff                       citação sugerida (Citation File Format)
+├─ CITACAO.bib                        citação em BibTeX (pacote + dissertação)
 ├─ MANIFEST_SHA256.txt                hash de todos os arquivos publicados
 ├─ verificar_integridade.ps1          confere o manifesto
+├─ .gitattributes                     preserva CRLF (bytes idênticos ao original)
 ├─ requirements.txt                   dependências do backend
 ├─ requirements-nucleo.txt            dependências do núcleo/Space
 ├─ Dockerfile                         imagem de referência (python:3.10)
@@ -73,7 +76,7 @@ Detalhes, comandos e tabelas comparativas: `docs/RESULTADOS_E_VERIFICACAO.md`.
 ├─ logs/                              transcrições das execuções
 ├─ dados_ambiental/                   banco da plataforma + 4 relatórios
 ├─ _qa_matriz/ambiental.db            banco de QA da matriz (59 descritores)
-└─ docs/                              metodologia, versão, verificação, segurança
+└─ docs/                              metodologia, versão, verificação, segurança, citação
 ```
 
 ## Versão identificada
@@ -89,18 +92,35 @@ Detalhes, comandos e tabelas comparativas: `docs/RESULTADOS_E_VERIFICACAO.md`.
 
 ## Como citar
 
-Use o arquivo `CITATION.cff` (a página do repositório mostra o botão *Cite
-this repository*) ou:
+**Na dissertação** o pacote é citado na seção 3.11.6 (*Rastreabilidade e
+reprodutibilidade*), como `(CARVALHO, 2026)`, e referenciado em ABNT na lista
+final:
 
 ```
-ALEF-TAV: material de reprodutibilidade da dissertação de mestrado.
-Snapshot 2026-11-11. GitHub: carvalhojaderson/alef-tav-dissertacao-reprodutibilidade.
+CARVALHO, J. P. ALEF-TAV: material de reprodutibilidade da dissertação de
+mestrado. Versão snapshot-2026-11-11. Curitiba: [s. n.], 2026. Disponível em:
+https://github.com/carvalhojaderson/alef-tav-dissertacao-reprodutibilidade.
+Acesso em: 13 nov. 2026.
 ```
 
-O `CITATION.cff` ainda pede confirmação do nome completo e do ORCID do autor
-antes de uma citação formal — item listado nas pendências.
+**Em trabalhos que usem este material**, use `CITATION.cff` (a página do
+repositório mostra o botão *Cite this repository*) ou `CITACAO.bib` (BibTeX):
 
-Detalhamento em `docs/VERSAO_E_RASTREABILIDADE.md`.
+```
+@misc{carvalho2026aleftavreprod,
+  author       = {Carvalho, Jáderson de Paula},
+  title        = {{ALEF-TAV}: material de reprodutibilidade da dissertação de mestrado},
+  year         = {2026},
+  version      = {snapshot-2026-11-11},
+  howpublished = {GitHub},
+  url          = {https://github.com/carvalhojaderson/alef-tav-dissertacao-reprodutibilidade}
+}
+```
+
+O texto integral dos trechos inseridos na dissertação, com a localização exata
+(seção e posição na lista de referências), está em
+`docs/CITACAO_E_DISSERTACAO.md`. A identificação do snapshot continua
+detalhada em `docs/VERSAO_E_RASTREABILIDADE.md`.
 
 ## Como reproduzir
 
@@ -134,7 +154,11 @@ Os valores esperados de cada passo estão em `docs/RESULTADOS_E_VERIFICACAO.md`.
 A reprodução deve ser feita em **cópia** do repositório, para que os arquivos
 de resultado publicados permaneçam intactos.
 
-## Pendências para a reprodução independente
+## Requisitos e limites conhecidos da reprodução independente
+
+Itens abaixo são **condições do material**, não tarefas abertas: descrevem o que
+é preciso ter para reexecutar os cálculos e o que não é reproduzível fora do
+contexto original.
 
 1. **CPython 3.10 é obrigatório** para `analises_experimentais` (bytecode) e para
    o palco dos simuladores. Sem ele, 16 motores de bancada e 37 casos de teste
@@ -148,7 +172,8 @@ de resultado publicados permaneçam intactos.
    em `docs/RESULTADOS_E_VERIFICACAO.md` §4. Os artefatos originais de 03–10/11
    foram preservados como estavam; nada foi recalculado nem sobrescrito.
 4. **Sem versão semântica no projeto de origem**: a identificação é por commit
-   base + estado do *working tree*, conforme `docs/VERSAO_E_RASTREABILIDADE.md`.
+   base + estado do *working tree* + tag do snapshot, conforme
+   `docs/VERSAO_E_RASTREABILIDADE.md`.
 5. **Serviços pagos e dados de terceiros** não são redistribuídos; os
    conectores leem chaves do ambiente e ficam desligados nos scripts de estudo.
 6. **Dependências opcionais** (RDKit, ASE, pymatgen, OpenMM, scikit-learn) não
@@ -156,4 +181,7 @@ de resultado publicados permaneçam intactos.
    indisponibilidade.
 7. **Durações** (`motor_prazo_s` e afins) variam por máquina e não são
    resultado científico.
+8. **Licença**: o material é publicado com permissão expressa para leitura,
+   execução e verificação acadêmica, sem licença aberta (`LICENCA.md`). Se o
+   autor adotar MIT/CC BY, `LICENCA.md` é o único arquivo a alterar.
 

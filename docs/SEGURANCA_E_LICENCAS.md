@@ -45,5 +45,7 @@ O detalhamento está em `LICENCA.md`:
   sulfametoxazol; nenhum dado proprietário redistribuído;
 * **dependências**: não redistribuídas, apenas declaradas em
   `requirements*.txt`;
-* **pendência**: escolha de licença aberta formal (MIT / CC BY 4.0) fica a
-  critério do autor.
+* **condição vigente**: não há licença aberta; as condições de uso são as de
+  `LICENCA.md` (permissão para leitura, execução e verificação acadêmica). Se o
+  autor adotar MIT / CC BY 4.0 no futuro, `LICENCA.md` é o único arquivo a
+  alterar.

@@ -13,9 +13,10 @@ distribuído e não substitui a versão operacional da plataforma ALEF-TAV.
   verificação dos cálculos** por pesquisadores, avaliadores e revisores.
 - Reutilização do código em outros produtos, redistribuição comercial ou
   publicação derivada **não estão autorizadas** por este documento.
-- Pendência registrada: o autor pode, se quiser, substituir esta cláusula por
-  uma licença aberta formal (por exemplo, MIT para código e CC BY 4.0 para
-  texto). Enquanto isso não ocorrer, vale o parágrafo acima.
+- Condição vigente, sem item em aberto: **não há licença aberta** e este arquivo
+  é a única fonte das condições de uso. Caso o autor decida adotar licença
+  aberta formal (por exemplo, MIT para código e CC BY 4.0 para texto), basta
+  substituir esta seção — nenhum outro arquivo precisa mudar.
 
 ## 2. Dados de entrada
 

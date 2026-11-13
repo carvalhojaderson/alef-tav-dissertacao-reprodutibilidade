@@ -112,7 +112,21 @@ acrescentaram — é a base do número de cobertura usado na dissertação.
 | `dados_ambiental/ambiental.db` | 20 | 15 pesquisas, 3 materiais, 15 descritores, 90 simulações, 4 viabilidades, 76 propriedades |
 | `_qa_matriz/ambiental.db` | 20 | 59 descritores, 52 componentes, 90 simulações, 135 eventos de histórico |
 
-## 8. Verificação pós-publicação (clone do GitHub)
+## 8. Citação na dissertação
+
+O pacote passou a ser citado no próprio texto da dissertação, como evidência de
+reprodutibilidade e não apenas como endereço externo:
+
+| Item | Onde | Conteúdo |
+|---|---|---|
+| Citação no texto | seção 3.11.6 — *Rastreabilidade e reprodutibilidade* | `(CARVALHO, 2026)` + URL do repositório + tag `snapshot-2026-11-11` |
+| Referência | lista de REFERÊNCIAS, ordem alfabética entre CALUS-MAKOWSKA (2024) e CAZETTA (2011) | entrada ABNT do pacote |
+
+Texto integral dos trechos e arquivo editado: `docs/CITACAO_E_DISSERTACAO.md`.
+O documento-fonte da dissertação não é redistribuído neste repositório; apenas
+o trecho inserido é transcrito na documentação.
+
+## 9. Verificação pós-publicação (clone do GitHub)
 
 Executada em 11/11/2026 sobre um `git clone` do repositório público, na tag
 `snapshot-2026-11-11`, em diretório temporário separado do snapshot:
