@@ -133,10 +133,15 @@ Executada em 11/11/2026 sobre um `git clone` do repositório público, na tag
 
 | Passo | Resultado |
 |---|---|
-| `git clone --branch snapshot-2026-11-11` | 104 arquivos versionados |
-| `verificar_integridade.ps1` | 103 conferem, 0 divergentes, 0 ausentes — **INTEGRIDADE OK** |
+| `git clone --branch snapshot-2026-11-11` | 106 arquivos versionados |
+| `verificar_integridade.ps1` | 105 conferem, 0 divergentes, 0 ausentes — **INTEGRIDADE OK** |
 | `python semelhanca_cosseno.py --json` | 0,9981 / 0,9826 / 0,9999 / 0,7913 / 0,7944; JSON regerado **byte-idêntico** ao publicado (mesmo SHA-256) |
 | `python comparar_candidatos.py` | 27 das 28 linhas da tabela idênticas; única diferença é P1 (publicado `ausente`, regerado `0,0` `calculado`) — a divergência de unidade da seção 4 |
+
+A verificação foi repetida em 13/11/2026, depois da atualização de documentação
+e citação (commit `e513063`, tag `snapshot-2026-11-11` = `70041fc`), com o mesmo
+resultado: 106 arquivos, 105 conferem, JSON regerado byte-idêntico e
+`git status` limpo após a execução.
 
 Conclusão: o conteúdo publicado no GitHub reproduz o snapshot e reexecuta os
 cálculos do estudo de caso sem ajuste manual. Os arquivos de resultado
