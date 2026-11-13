@@ -81,7 +81,7 @@ valor como **metro**: com `parametro_rede = 3,5` ela calcula
 aceita como valor `calculado`. O artefato publicado em 03/11 **não** traz P1,
 o que indica que a versão então em uso descartava o zero. Nenhum resultado
 publicado foi alterado; a divergência está registrada aqui e na seção de
-pendências do `README.md`.
+requisitos e limites conhecidos do `README.md`.
 
 ## 5. Estudo de caso SMX — estrutura idêntica, mesma divergência de P1
 
