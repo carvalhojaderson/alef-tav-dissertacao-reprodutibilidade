@@ -53,7 +53,16 @@ if ($Gerar) {
         "{0}  {1}" -f $hash, (Get-Relativo $Caminho $f.FullName)
     }
     $utf8 = New-Object System.Text.UTF8Encoding($false)
-    [System.IO.File]::WriteAllText($manifesto, (($linhas -join "`n") + "`n"), $utf8)
+    $texto = (($linhas -join "`n") + "`n")
+    # grava em arquivo temporario e substitui (evita bloqueio/atributo somente leitura)
+    $tmp = "$manifesto.tmp"
+    [System.IO.File]::WriteAllText($tmp, $texto, $utf8)
+    if (Test-Path -LiteralPath $manifesto) {
+        $item = Get-Item -LiteralPath $manifesto -Force
+        if ($item.IsReadOnly) { $item.IsReadOnly = $false }
+        Remove-Item -LiteralPath $manifesto -Force
+    }
+    Move-Item -LiteralPath $tmp -Destination $manifesto -Force
     if (-not $Silencioso) { Write-Output ("manifesto gerado: {0} arquivos -> {1}" -f $arquivos.Count, $manifesto) }
     exit 0
 }
